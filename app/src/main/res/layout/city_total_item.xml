@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/locate"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/locateHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+        android:drawableLeft="@mipmap/city_all_city"
+        android:drawablePadding="@dimen/activity_horizontal_margin12"
+        android:gravity="center_vertical"
+        android:text="@string/city_all_city"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/locateHint_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/locateHint"
+        android:layout_below="@id/locateHint"
+        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+        android:paddingLeft="@dimen/activity_horizontal_margin26"
+        android:text="@string/city_all_hint"
+        android:textColor="@color/letter_location_city" />
+
+</RelativeLayout>

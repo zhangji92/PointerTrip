@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/fans_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+        android:layout_marginLeft="@dimen/activity_text_size10"
+        android:layout_marginRight="@dimen/activity_text_size10"
+        android:layout_marginTop="@dimen/activity_horizontal_margin10">
+
+
+
+        <RelativeLayout
+            android:id="@+id/relative_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <yc.pointer.trip.view.CustomCircleImage
+                android:id="@+id/fans_head"
+                android:layout_width="@dimen/activity_horizontal_margin50"
+                android:layout_height="@dimen/activity_horizontal_margin50"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/head" />
+
+            <ImageView
+                android:id="@+id/verify_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin35"
+                android:layout_marginTop="@dimen/activity_horizontal_margin35"
+                android:src="@mipmap/icon_vip" />
+        </RelativeLayout>
+
+
+        <yc.pointer.trip.view.MarqueeTextView
+            android:id="@+id/fans_nick"
+            android:layout_width="@dimen/activity_horizontal_margin95"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+            android:layout_toRightOf="@id/relative_head"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:textColor="@color/text"
+            android:textSize="@dimen/activity_text_size18" />
+
+        <TextView
+            android:id="@+id/fans_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+            android:layout_marginRight="@dimen/activity_text_size10"
+            android:layout_toRightOf="@+id/fans_nick"
+            android:background="@drawable/mine_location"
+            android:paddingBottom="@dimen/activity_horizontal_margin2"
+            android:paddingLeft="@dimen/activity_text_size10"
+            android:paddingRight="@dimen/activity_text_size10"
+            android:paddingTop="@dimen/activity_horizontal_margin2"
+            android:textColor="@color/mine_nick_text"
+            android:textSize="@dimen/activity_text_size12" />
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            android:src="@mipmap/arrow_mine" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/wrate_video" />
+</LinearLayout>

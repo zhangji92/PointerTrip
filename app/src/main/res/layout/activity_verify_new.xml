@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorhint"
+    android:orientation="vertical">
+
+    <include layout="@layout/comment_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin7"
+                android:background="@color/colorTitle"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/activity_horizontal_margin15"
+                    android:paddingTop="@dimen/activity_horizontal_margin10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                        android:text="真实姓名"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/activity_text_size18" />
+
+                    <EditText
+                        android:id="@+id/person_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="(必填)"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_horizontal_margin5"
+                        android:paddingRight="@dimen/activity_horizontal_margin10" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_horizontal_margin1"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                    android:background="@color/verify_view" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/activity_horizontal_margin15"
+                    android:paddingTop="@dimen/activity_horizontal_margin10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                        android:text="身份证号"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/activity_text_size18" />
+
+                    <EditText
+                        android:id="@+id/person_id_num"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="18位(必填)"
+                        android:digits="0123456789xX"
+                        android:inputType="number"
+                        android:maxLength="18"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_horizontal_margin5"
+                        android:paddingRight="@dimen/activity_horizontal_margin10" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_horizontal_margin1"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                    android:background="@color/verify_view" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/activity_horizontal_margin15"
+                    android:paddingTop="@dimen/activity_horizontal_margin10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                        android:text="银行卡号"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/activity_text_size18" />
+
+                    <EditText
+                        android:id="@+id/person_bank_num"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="(必填)"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_horizontal_margin5"
+                        android:paddingRight="@dimen/activity_horizontal_margin10" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin7"
+                android:background="@color/colorTitle"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/liner_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/activity_horizontal_margin15"
+                    android:paddingTop="@dimen/activity_horizontal_margin10">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                        android:text="联系方式"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/activity_text_size18" />
+
+                    <EditText
+                        android:id="@+id/person_add_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="11位(必填)"
+                        android:maxLength="11"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_horizontal_margin5"
+                        android:paddingRight="@dimen/activity_horizontal_margin10" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_horizontal_margin1"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                    android:background="@color/verify_view" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/activity_horizontal_margin15"
+                    android:paddingTop="@dimen/activity_horizontal_margin10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                        android:text="导游证号"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/activity_text_size18" />
+
+                    <EditText
+                        android:id="@+id/person_add_card"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="(选填)"
+                        android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/activity_horizontal_margin5"
+                        android:paddingRight="@dimen/activity_horizontal_margin10" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin7"
+                android:background="@color/colorTitle"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                    android:text="添加证件照片"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/activity_text_size18" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin24"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin18"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin7"
+                        android:layout_weight="1"
+                        android:background="@mipmap/img_border_b"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/person_idcard_photo"
+                            android:layout_width="@dimen/activity_horizontal_margin110"
+                            android:layout_height="@dimen/activity_horizontal_margin80"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin6"
+                            android:src="@mipmap/img_add_id_img" />
+
+                        <TextView
+                            android:id="@+id/idcard_verify_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                            android:text="身份证正面照"
+                            android:textColor="@color/verify_new_id" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin7"
+                        android:layout_weight="1"
+                        android:background="@mipmap/img_border_o"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/person_add_img"
+                            android:layout_width="@dimen/activity_horizontal_margin110"
+                            android:layout_height="@dimen/activity_horizontal_margin80"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin6"
+                            android:src="@mipmap/img_add_tourguide_img" />
+
+                        <TextView
+                            android:id="@+id/guidephoto_verify_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                            android:text="导游证正面照"
+                            android:textColor="@color/verify_new_tourguide" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bnt_commit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin25"
+                android:layout_marginRight="@dimen/activity_horizontal_margin25"
+                android:layout_marginTop="@dimen/activity_horizontal_margin30"
+                android:background="@drawable/pay_again"
+                android:text="提交"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/activity_text_size18" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+
+                >
+                <CheckBox
+                    android:id="@+id/check_rules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/demand_selector"
+                    android:button="@null"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                    />
+                <TextView
+                    android:id="@+id/rules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                    android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+                    android:text="@string/verify_rule"
+                    android:textColor="@color/horizontal_text"
+                    android:textSize="@dimen/activity_text_size14"/>
+            </LinearLayout>
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="@dimen/activity_horizontal_margin20"-->
+                <!--android:layout_marginTop="@dimen/activity_horizontal_margin30"-->
+                <!--android:paddingLeft="@dimen/activity_horizontal_margin15"-->
+                <!--android:paddingRight="@dimen/activity_horizontal_margin15"-->
+                <!--android:text="注：\r\n1.第三方平台登录用户需要填写联系方式，手机号注册用户可忽略\r\n2.发单用户只需认证真实姓名、个人银行卡号以及身份证号即可\r\n3.抢单用户需要在满足发单条件以外，需添加身份证正面照,为了提高您的抢单成功率，建议填写个人生活照、导游证编号以及导游证照片。"-->
+                <!--android:textColor="@color/horizontal_text"-->
+                <!--android:textSize="@dimen/activity_horizontal_margin14" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/msg_adapter_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/activity_horizontal_margin50"
+            android:layout_height="@dimen/activity_horizontal_margin50"
+            android:layout_marginTop="@dimen/activity_horizontal_margin18"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin10">
+
+            <yc.pointer.trip.view.CustomCircleImage
+                android:id="@+id/msg_adapter_header"
+                android:layout_width="@dimen/activity_horizontal_margin45"
+                android:layout_height="@dimen/activity_horizontal_margin45"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/head" />
+
+            <ImageView
+                android:id="@+id/verify_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin34"
+                android:layout_marginTop="@dimen/activity_horizontal_margin32"
+                android:src="@mipmap/icon_vip" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/liner_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin8"
+            android:layout_marginRight="@dimen/activity_horizontal_margin8"
+            android:layout_marginTop="@dimen/activity_horizontal_margin18"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/msg_adapter_nick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/msg_list" />
+
+            <TextView
+                android:id="@+id/msg_adapter_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/activity_horizontal_margin8"
+                android:text=""
+                android:textColor="@color/text" />
+            <TextView
+                android:id="@+id/msg_adapter_delete_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                android:lineSpacingExtra="@dimen/activity_horizontal_margin8"
+                android:text="这条评论已删除"
+                android:textStyle="normal"
+                android:typeface="sans"
+                android:background="@color/edit_color_hint"
+                android:textColor="@color/text"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/msg_adapter_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin12"
+                android:text="0"
+                android:textColor="@color/comment_addtime"
+                android:textSize="@dimen/text_size_14sp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/activity_horizontal_margin72"
+            android:layout_height="@dimen/activity_horizontal_margin72"
+            android:layout_marginRight="@dimen/activity_horizontal_margin10"
+            android:layout_marginTop="@dimen/activity_horizontal_margin18">
+
+            <ImageView
+                android:id="@+id/msg_adapter_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@mipmap/no_photo" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_play_sy_m" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin1"
+        android:layout_marginTop="@dimen/activity_horizontal_margin8"
+        android:background="@color/msg_list_view" />
+
+
+</LinearLayout>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@id/standard_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTitle"
+        app:navigationIcon="@mipmap/goback"
+        app:popupTheme="@style/ToolbarPopupTheme"
+        app:theme="@style/hometoolbar_theme"
+        tools:ignore="Overdraw">
+
+        <TextView
+            android:id="@id/standard_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/withdrawal_text"
+            android:textSize="@dimen/text_size_18sp" />
+
+
+        <ImageView
+            android:id="@+id/scan_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/activity_horizontal_margin10"
+            android:src="@mipmap/icon_flicking_gray" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/tool_bar_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line"
+        android:visibility="visible" />
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/grab_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--srlAccentColor srlPrimaryColor 将会改变 Header 和 Footer 的主题颜色-->
+        <!--srlEnablePreviewInEditMode 可以开启和关闭预览功能-->
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbar_bk"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorTitle"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@mipmap/bac_order_status">
+
+                    <RelativeLayout
+                        android:id="@+id/relative_grab_head"
+                        android:layout_width="@dimen/activity_horizontal_margin90"
+                        android:layout_height="@dimen/activity_horizontal_margin90"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10">
+
+                        <yc.pointer.trip.view.CustomCircleImage
+                            android:id="@+id/grad_head"
+                            android:layout_width="@dimen/activity_horizontal_margin80"
+                            android:layout_height="@dimen/activity_horizontal_margin80"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/head" />
+
+                        <ImageView
+                            android:id="@+id/verify_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin65"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin65"
+                            android:src="@mipmap/icon_vip" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/grab_nick"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/relative_grab_head"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                        android:text=""
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/activity_text_size16" />
+
+                    <TextView
+                        android:id="@+id/grab_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/grab_nick"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                        android:text=""
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/activity_text_size16" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/grab_call_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="-35dp"
+                    android:src="@mipmap/bill_dial" />
+                <!--订单编号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/activity_horizontal_margin6"
+                        android:layout_height="@dimen/activity_horizontal_margin20"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+                        android:background="@color/order_num" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                        android:text="订单编号"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/activity_text_size16" />
+
+                    <TextView
+                        android:id="@+id/bill_order_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                        android:gravity="right"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/activity_text_size16" />
+
+                </LinearLayout>
+                <!--订单状态-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/activity_horizontal_margin6"
+                        android:layout_height="@dimen/activity_horizontal_margin20"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+                        android:background="@color/status_bar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                        android:text="订单状态"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/activity_text_size16" />
+
+                    <TextView
+                        android:id="@+id/grab_order_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                        android:gravity="right"
+                        android:text=""
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/activity_text_size16" />
+
+                </LinearLayout>
+                <!--结束时间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/activity_horizontal_margin6"
+                        android:layout_height="@dimen/activity_horizontal_margin20"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+                        android:background="@color/bill_view_back_surplus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                        android:text="结束时间"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/activity_text_size16" />
+
+                    <TextView
+                        android:id="@+id/grab_surplus_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                        android:gravity="right"
+                        android:textColor="@color/horizontal_text"
+                        android:textSize="@dimen/activity_text_size16" />
+                </LinearLayout>
+                <!--预计收入-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/activity_horizontal_margin6"
+                        android:layout_height="@dimen/activity_horizontal_margin20"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+                        android:background="@color/grab_money" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                        android:text="预计收入"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/activity_text_size16" />
+
+                    <TextView
+                        android:id="@+id/grab_make_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                        android:gravity="right"
+                        android:textColor="@color/horizontal_text"
+                        android:textSize="@dimen/activity_text_size16" />
+                </LinearLayout>
+                <!--特别提醒-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/activity_horizontal_margin6"
+                        android:layout_height="@dimen/activity_horizontal_margin20"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+                        android:background="@color/horizontal_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                        android:text="@string/attention"
+                        android:textColor="@color/horizontal_text"
+                        android:textSize="@dimen/activity_text_size16" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/grab_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin40"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                    android:letterSpacing="0.1"
+                    android:lineSpacingExtra="@dimen/activity_horizontal_margin3"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/activity_text_size12" />
+
+                <Button
+                    android:id="@+id/grab_cancel_order"
+                    android:layout_width="@dimen/activity_horizontal_margin165"
+                    android:layout_height="@dimen/activity_horizontal_margin35"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin50"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin20"
+                    android:background="@drawable/order_preview_bnt"
+                    android:elevation="@dimen/activity_horizontal_margin2"
+                    android:text="@string/cancel_order"
+                    android:textColor="@color/read_header_text"
+                    android:textSize="@dimen/activity_text_size16" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/register_back">
+    <include
+        layout="@layout/partial_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <yc.pointer.trip.view.ClearEditText
+        android:id="@+id/register_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:layout_marginTop="@dimen/activity_horizontal_margin40"
+        android:background="@null"
+        android:drawableLeft="@mipmap/phone"
+        android:drawableRight="@drawable/delete_selector"
+        android:gravity="center_vertical"
+        android:hint="请输入您要绑定的新手机号"
+        android:inputType="phone"
+        android:paddingBottom="@dimen/activity_horizontal_margin5"
+        android:drawablePadding="@dimen/activity_horizontal_margin10"
+        android:paddingLeft="@dimen/activity_horizontal_margin5"
+        android:textColor="@color/video_text"
+        android:textColorHint="@color/video_text"
+        android:textSize="@dimen/text_size_18sp"
+
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin1"
+        android:background="@color/road_line"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin10">
+
+        <EditText
+            android:id="@+id/regiter_verify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin42"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+            android:layout_marginRight="@dimen/activity_horizontal_margin30"
+            android:background="@null"
+            android:drawableLeft="@mipmap/register_verify"
+            android:drawablePadding="@dimen/activity_horizontal_margin5"
+            android:paddingLeft="@dimen/activity_horizontal_margin5"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:gravity="center_vertical"
+            android:hint="@string/register_verify"
+            android:textColor="@color/video_text"
+            android:textColorHint="@color/video_text"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <Button
+            android:id="@+id/verify_button"
+            android:layout_width="@dimen/activity_horizontal_margin100"
+            android:layout_height="@dimen/activity_horizontal_margin32"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin30"
+            android:background="@drawable/adapter_order_txt"
+            android:text="@string/register_get_verify"
+            android:textColor="@color/colorhint" />
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin1"
+        android:background="@color/road_line"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:layout_marginTop="@dimen/activity_horizontal_margin5"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin40"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin43"
+        android:layout_marginRight="@dimen/activity_horizontal_margin43"
+        android:layout_marginTop="@dimen/activity_horizontal_margin30"
+        android:background="@drawable/adapter_order_txt"
+        android:gravity="center"
+        android:text="确定"
+        android:textColor="@color/colorhint"
+        android:textSize="@dimen/text_size_20sp" />
+</LinearLayout>

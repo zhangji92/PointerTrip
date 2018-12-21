@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/register_back"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/partial_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <yc.pointer.trip.view.ClearEditText
+        android:id="@+id/register_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:layout_marginTop="@dimen/activity_horizontal_margin40"
+        android:background="@null"
+        android:drawableLeft="@mipmap/phone"
+        android:drawablePadding="@dimen/activity_horizontal_margin10"
+        android:drawableRight="@drawable/delete_selector"
+        android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+        android:gravity="center_vertical"
+        android:hint="@string/register_phone"
+        android:inputType="phone"
+        android:paddingBottom="@dimen/activity_horizontal_margin5"
+        android:paddingLeft="@dimen/activity_horizontal_margin5"
+        android:textColor="@color/video_text"
+        android:textColorHint="@color/video_text"
+        android:textSize="@dimen/text_size_16sp"
+
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:background="@color/road_line" />
+
+    <yc.pointer.trip.view.ClearEditText
+        android:id="@+id/regiter_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+        android:background="@null"
+        android:drawableLeft="@mipmap/register_psw"
+        android:drawablePadding="@dimen/activity_horizontal_margin10"
+        android:drawableRight="@drawable/delete_selector"
+        android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+        android:gravity="center_vertical"
+        android:hint="@string/register_psw"
+        android:inputType="textPassword"
+        android:paddingBottom="@dimen/activity_horizontal_margin5"
+        android:paddingLeft="@dimen/activity_horizontal_margin5"
+        android:textColor="@color/video_text"
+        android:textColorHint="@color/video_text"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:background="@color/road_line" />
+
+    <yc.pointer.trip.view.ClearEditText
+        android:id="@+id/regiter_psw_again"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+        android:background="@null"
+        android:drawableLeft="@mipmap/register_psw"
+        android:drawablePadding="@dimen/activity_horizontal_margin10"
+        android:drawableRight="@drawable/delete_selector"
+        android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+        android:gravity="center_vertical"
+        android:hint="@string/register_psw_again"
+        android:inputType="textPassword"
+        android:paddingBottom="@dimen/activity_horizontal_margin5"
+        android:paddingLeft="@dimen/activity_horizontal_margin5"
+        android:textColor="@color/video_text"
+        android:textColorHint="@color/video_text"
+
+        android:textSize="@dimen/text_size_16sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:background="@color/road_line" />
+    <yc.pointer.trip.view.ClearEditText
+        android:id="@+id/invitation_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+        android:background="@null"
+        android:drawableLeft="@mipmap/icon_invitation_zc"
+        android:drawablePadding="@dimen/activity_horizontal_margin10"
+        android:drawableRight="@drawable/delete_selector"
+        android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+        android:gravity="center_vertical"
+        android:hint="请输入您的邀请码（选填）"
+        android:inputType="number"
+        android:paddingBottom="@dimen/activity_horizontal_margin5"
+        android:paddingLeft="@dimen/activity_horizontal_margin5"
+        android:textColor="@color/video_text"
+        android:textColorHint="@color/video_text"
+        android:textSize="@dimen/text_size_16sp" />
+    <ImageView
+        android:id="@+id/line_invitation_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:background="@color/road_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin10">
+
+        <EditText
+            android:id="@+id/regiter_verify"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin42"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+            android:layout_marginRight="@dimen/activity_horizontal_margin30"
+            android:background="@null"
+            android:drawableLeft="@mipmap/register_verify"
+            android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+            android:drawablePadding="@dimen/activity_horizontal_margin5"
+            android:gravity="center_vertical"
+            android:hint="@string/register_verify"
+            android:inputType="number"
+            android:paddingLeft="@dimen/activity_horizontal_margin5"
+            android:textColor="@color/video_text"
+            android:textColorHint="@color/video_text"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <Button
+            android:id="@+id/verify_button"
+            android:layout_width="@dimen/activity_horizontal_margin100"
+            android:layout_height="@dimen/activity_horizontal_margin32"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin30"
+            android:background="@drawable/adapter_order_txt"
+            android:text="@string/register_get_verify"
+            android:textColor="@color/colorhint" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+        android:background="@color/road_line" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin40"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin43"
+        android:layout_marginRight="@dimen/activity_horizontal_margin43"
+        android:layout_marginTop="@dimen/activity_horizontal_margin30"
+        android:background="@drawable/adapter_order_txt"
+        android:gravity="center"
+        android:text="@string/register_title"
+        android:textColor="@color/colorhint"
+        android:textSize="@dimen/text_size_20sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/register_test_agrement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+            android:text="@string/register_agreement"
+            android:textColor="@color/video_text"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/agrement_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+            android:layout_toRightOf="@id/register_test_agrement"
+            android:text="@string/agreement_text"
+            android:textColor="@color/activity_text"
+            android:typeface="sans" />
+    </RelativeLayout>
+
+
+</LinearLayout>

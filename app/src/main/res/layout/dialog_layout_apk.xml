@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/dialog_apk_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+        android:src="@mipmap/apk_back" />
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/dialog_apk_title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:gravity="center" />-->
+    <!--android:layout_below="@id/dialog_apk_title"-->
+    <ListView
+        android:id="@+id/dialog_apk_msg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin140"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+        android:layout_marginTop="@dimen/activity_horizontal_margin220"
+        android:paddingLeft="@dimen/activity_horizontal_margin10"
+        android:paddingRight="@dimen/activity_horizontal_margin10"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/dialog_apk_img"
+        android:layout_below="@id/dialog_apk_msg"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin20"
+        android:paddingRight="@dimen/activity_horizontal_margin20">
+
+        <Button
+            android:id="@+id/dialog_apk_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center"
+            android:text="立即更新"
+            android:textColor="#0ed3f7"
+            android:textSize="@dimen/text_size_20sp" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+            android:layout_marginRight="@dimen/activity_horizontal_margin10"
+            android:background="@color/line" />
+
+        <Button
+            android:id="@+id/dialog_apk_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center"
+            android:text="立即更新"
+            android:textColor="#aeaeae"
+            android:textSize="@dimen/text_size_20sp" />
+    </LinearLayout>
+</RelativeLayout>

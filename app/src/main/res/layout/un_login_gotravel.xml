@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/comment_toolbar"/>
+    <ImageView
+            android:layout_width="@dimen/activity_horizontal_margin250"
+            android:layout_height="@dimen/activity_horizontal_margin165"
+            android:src="@mipmap/un_login_people"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin90"
+
+    />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/unlogin_notice"
+            android:textColor="@color/read_header_text"
+            android:textSize="@dimen/activity_text_size20"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin25"
+    />
+    <Button
+            android:id="@+id/go_login"
+            android:layout_width="@dimen/activity_horizontal_margin140"
+            android:layout_height="@dimen/activity_horizontal_margin40"
+            android:background="@mipmap/button_jianbian"
+            android:text="立即登录"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/text_size_18sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+    />
+
+
+</LinearLayout>

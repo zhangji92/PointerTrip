@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_details_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <!--    android:background="@color/wrate_video"-->
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_smart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin40"
+        android:background="@color/colorTitle">
+        <!--srlAccentColor srlPrimaryColor 将会改变 Header 和 Footer 的主题颜色-->
+        <!--srlEnablePreviewInEditMode 可以开启和关闭预览功能-->
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTitle" />
+
+        <!--
+            android:descendantFocusability="beforeDescendants"-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/scroll_video"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="none"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/video_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorTitle"
+                    android:orientation="vertical">
+                    <!--播放器-->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <yc.pointer.trip.view.EmptyControlBookVideo
+                            android:id="@+id/video_details_surfaceview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+                    <!--游记作者信息-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_horizontal_margin60"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/activity_horizontal_margin8"
+                        android:paddingLeft="@dimen/activity_horizontal_margin10"
+                        android:paddingRight="@dimen/activity_horizontal_margin10"
+                        android:paddingTop="@dimen/activity_horizontal_margin8">
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/activity_horizontal_margin45"
+                            android:layout_height="@dimen/activity_horizontal_margin45"
+                            android:layout_above="@id/home_video_page"
+                            android:layout_gravity="center_horizontal">
+
+                            <yc.pointer.trip.view.CustomCircleImage
+                                android:id="@+id/video_details_head"
+                                android:layout_width="@dimen/activity_horizontal_margin45"
+                                android:layout_height="@dimen/activity_horizontal_margin45"
+                                android:layout_centerInParent="true"
+                                android:src="@mipmap/head" />
+
+                            <ImageView
+                                android:id="@+id/verify_result"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin35"
+                                android:src="@mipmap/icon_vip" />
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/video_nick_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left"
+                                android:maxLines="1"
+                                android:text="哇咔咔"
+                                android:textColor="@color/foot_header_item_text"
+                                android:textSize="@dimen/text_size_16sp"
+                                android:typeface="sans" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin2"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/video_date"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:maxLines="1"
+                                    android:text="2天前"
+                                    android:textColor="@color/history_search"
+                                    android:textSize="@dimen/text_size_16sp"
+                                    android:typeface="sans"
+                                    android:visibility="gone"/>
+
+                                <TextView
+                                    android:id="@+id/video_city"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="上海"
+                                    android:textColor="@color/history_search"
+                                    android:textSize="@dimen/text_size_16sp"
+                                    android:typeface="sans" />
+
+                                <TextView
+                                    android:id="@+id/video_senic"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:ellipsize="end"
+                                    android:gravity="center"
+                                    android:maxLines="1"
+                                    android:text="迪士尼"
+                                    android:textColor="@color/history_search"
+                                    android:textSize="@dimen/text_size_16sp"
+                                    android:typeface="sans" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--<Button-->
+                        <!--android:id="@+id/video_reserve"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="@dimen/activity_horizontal_margin40"-->
+                        <!--android:background="@drawable/verify_button"-->
+                        <!--android:gravity="center"-->
+                        <!--android:text="@string/video_details_reserve"-->
+                        <!--android:textColor="@color/colorTitle"-->
+                        <!--android:textSize="@dimen/text_size_20sp"-->
+                        <!--android:typeface="sans" />-->
+                    </LinearLayout>
+                    <!--游记标题-->
+                    <TextView
+                        android:id="@+id/video_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin5"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin15"
+                        android:ellipsize="end"
+                        android:text="当少女心遇上迪士尼"
+                        android:textColor="@color/foot_header_item_text"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:typeface="sans" />
+                    <!--游记简介-->
+                    <TextView
+                        android:id="@+id/video_introduce_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin5"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                        android:ellipsize="end"
+                        android:maxLines="5"
+                        android:text="上海迪士尼乐园，是中国内地首座迪士尼主题乐园，上海迪士尼乐园，是中国内地首座迪士尼主题乐园，上海迪士尼乐园，是中国内地首座迪士尼主题乐园，位于上海市浦东新区川沙新镇"
+                        android:textColor="@color/foot_header_item_text"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:typeface="sans" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_horizontal_margin2"
+                        android:background="@color/wrate_video" />
+                    <!--评论数-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_horizontal_margin36"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/comments_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+                            android:gravity="center_vertical"
+                            android:text="@string/comments_num"
+                            android:textColor="@color/comment_num"
+                            android:textSize="@dimen/text_size_14sp" />
+
+                    </LinearLayout>
+                    <!--评论列表-->
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/comments_main_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/activity_horizontal_margin15"
+                        android:paddingLeft="@dimen/activity_horizontal_margin10"
+                        android:paddingRight="@dimen/activity_horizontal_margin10"
+                        android:paddingTop="@dimen/activity_horizontal_margin15"
+                        android:scrollbars="none" />
+
+                    <include layout="@layout/empty" />
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTitle" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/comments_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorTitle"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin1"
+            android:background="@color/wrate_video" />
+
+        <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:alpha="0.5"-->
+        <!--android:background="@color/colorTitle" />-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/edit_comments_bottom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/logo"
+                android:src="@mipmap/icon_comments_details_x" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/activity_horizontal_margin24"
+                android:background="@color/wrate_video" />
+
+            <ImageView
+                android:id="@+id/like_video"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/logo"
+                android:src="@mipmap/icon_zan_details_x" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/activity_horizontal_margin24"
+                android:background="@color/wrate_video" />
+
+            <ImageView
+                android:id="@+id/collection_video"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/logo"
+                android:src="@mipmap/icon_collection_details_x" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/activity_horizontal_margin24"
+                android:background="@color/wrate_video" />
+
+            <ImageView
+                android:id="@+id/share_video"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/logo"
+                android:src="@mipmap/icon_share_details_x" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/activity_horizontal_margin24"
+                android:background="@color/wrate_video" />
+
+            <ImageView
+                android:id="@+id/exit_video"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/logo"
+                android:src="@mipmap/icon_close_details_x" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/comments_up"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin40"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorTitle"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin1"
+            android:background="@color/wrate_video" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/activity_horizontal_margin5">
+
+            <EditText
+
+                android:id="@+id/edit_comments_up"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                android:layout_weight="1"
+                android:alpha="0.8"
+                android:background="@drawable/video_comment_edit"
+                android:gravity="center|left"
+                android:hint="写评论(最多150字)"
+                android:maxLines="2"
+                android:paddingBottom="@dimen/activity_horizontal_margin2"
+                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                android:paddingRight="@dimen/activity_horizontal_margin5"
+                android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+                android:textSize="@dimen/text_size_16sp" />
+            <!--android:focusable="true"-->
+            <!--android:focusableInTouchMode="true"-->
+
+            <Button
+                android:id="@+id/comments_publish"
+                android:layout_width="@dimen/activity_horizontal_margin55"
+                android:layout_height="@dimen/activity_horizontal_margin35"
+                android:layout_marginRight="@dimen/activity_horizontal_margin5"
+                android:background="@drawable/pay_again"
+                android:text="发送"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_size_18sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

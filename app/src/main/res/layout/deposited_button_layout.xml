@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/activity_horizontal_margin10"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/deposited_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/line"
+        android:text="退回押金"
+        android:textColor="@color/foot_header_item_text"
+        android:textSize="@dimen/text_size_18sp"
+        android:textStyle="normal"
+        android:typeface="sans" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+        android:paddingBottom="@dimen/activity_horizontal_margin15"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前押金总额"
+            android:textColor="@color/letter_location_city"
+            android:textSize="@dimen/activity_text_size12" />
+
+        <TextView
+            android:id="@+id/deposited_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="399"
+            android:textColor="@color/activity_text"
+            android:textSize="@dimen/activity_text_size12"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin3"
+            android:layout_marginRight="@dimen/activity_horizontal_margin3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="@color/letter_location_city"
+            android:textSize="@dimen/activity_text_size12" />
+    </LinearLayout>
+
+
+</LinearLayout>

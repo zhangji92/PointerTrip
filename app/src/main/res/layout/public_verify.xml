@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/go_verify"
+    android:visibility="visible">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin72"
+                android:src="@mipmap/img_certification_img"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/verify_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                android:text=""
+                android:textColor="@color/new_my_money_button"
+                android:textSize="@dimen/text_size_18sp"/>
+            <Button
+                android:id="@+id/button_go_verify"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin45"
+                android:background="@drawable/go_verify"
+                android:layout_marginRight="@dimen/activity_horizontal_margin25"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin25"
+                android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                android:text=""
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/colorTitle"
+                android:textStyle="normal"
+                />
+            <TextView
+                android:id="@+id/note_go_verify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin25"
+                android:layout_marginRight="@dimen/activity_horizontal_margin25"
+                android:layout_marginTop="@dimen/activity_horizontal_margin15"
+                android:padding="@dimen/activity_horizontal_margin5"
+                android:textStyle="normal"
+                android:textSize="@dimen/text_size_14sp"
+                android:text="@string/note_verify"
+                android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin5"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

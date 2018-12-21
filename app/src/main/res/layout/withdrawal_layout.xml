@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+    <include layout="@layout/comment_toolbar"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin25"
+        android:text="@string/focus_me"
+        android:textSize="@dimen/text_size_20sp"
+        android:textColor="@color/foot_header_item_text"
+        android:typeface="sans"/>
+    <ImageView
+        android:layout_width="@dimen/activity_horizontal_margin160"
+        android:layout_height="@dimen/activity_horizontal_margin160"
+        android:layout_marginTop="@dimen/activity_horizontal_margin25"
+        android:src="@mipmap/wechat_qr"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+        android:text="@string/focus_me_introduce"
+        android:textSize="@dimen/text_size_14sp"
+        android:textColor="@color/video_text"
+        android:typeface="sans"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin25"
+        android:text="@string/public_wechat"
+        android:textSize="@dimen/text_size_20sp"
+        android:textColor="@color/foot_header_item_text"
+        android:typeface="sans"/>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin40"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin40"
+        android:layout_marginRight="@dimen/activity_horizontal_margin40"
+        android:layout_marginTop="@dimen/activity_horizontal_margin30"
+        android:background="@drawable/adapter_order_txt"
+        android:gravity="center"
+        android:text="去关注"
+        android:textColor="@color/colorhint"
+        android:textSize="@dimen/text_size_20sp" />
+</LinearLayout>

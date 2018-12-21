@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin3"
+    android:layout_marginRight="@dimen/activity_horizontal_margin3"
+    android:layout_marginTop="@dimen/activity_horizontal_margin3"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin5"
+    android:paddingTop="@dimen/activity_horizontal_margin3">
+
+    <TextView
+        android:id="@+id/reply_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="@dimen/activity_horizontal_margin3"
+        android:text="张三回复李四：回复内容 张三回复李四：回复内容 张三回复李四：回复内容张三回复李四：回复内容"
+        android:textSize="@dimen/text_size_14sp" />
+
+</LinearLayout>

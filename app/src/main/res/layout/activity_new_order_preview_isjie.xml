@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/comment_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/activity_horizontal_margin10"
+        android:paddingRight="@dimen/activity_horizontal_margin10"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/activity_horizontal_margin18">
+
+            <!-- 订单主要数据组件-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/back_order_detail_isjie"
+                android:orientation="vertical">
+                <!-- 下单时间-->
+                <TextView
+                    android:id="@+id/order_create_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin30"
+                    android:gravity="center"
+                    android:text="@string/order_detail_number_new"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+                <!--目的地组件-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin16"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/destination"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:textStyle="normal"
+                        android:typeface="normal" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin14"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin14"
+                        android:src="@mipmap/img_arrow_orderpreview" />
+
+                    <TextView
+                        android:id="@+id/destination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:textStyle="normal"
+                        android:typeface="normal" />
+
+                </LinearLayout>
+                <!--内容组件-->
+                <!--这个RelativeLayout很重要，在API23&24上，
+                如果没有，scroll嵌套recycle，即便重写layoutManger也会导致显示不全-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/order_preview_recycle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin25"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin25"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin45">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                    android:src="@mipmap/order_line" />
+
+
+                <TextView
+                    android:id="@+id/order_person_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin25"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                    android:textStyle="normal"
+                    android:typeface="sans"
+                    android:text="接单人信息"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textColor="@color/new_my_money_button"/>
+                <!--昵称信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin25"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin25"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10">
+
+                    <TextView
+                        android:id="@+id/order_person_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="昵称"
+                        android:textColor="@color/back_normal"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="normal"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/order_nickname_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+                        android:lineSpacingExtra="@dimen/activity_horizontal_margin3"
+                        android:text=""
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="normal"
+                        android:typeface="sans" />
+
+                </LinearLayout>
+                <!--联系信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin25"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin25"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10">
+
+                    <TextView
+                        android:id="@+id/order_person_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="联系电话"
+                        android:textColor="@color/back_normal"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="normal"
+                        android:typeface="sans" />
+
+                    <TextView
+                        android:id="@+id/order_phone_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+                        android:lineSpacingExtra="@dimen/activity_horizontal_margin3"
+                        android:text=""
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="normal"
+                        android:typeface="sans" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--二维码图片-->
+            <ImageView
+                android:id="@+id/star_qrcode"
+                android:layout_width="@dimen/activity_horizontal_margin125"
+                android:layout_height="@dimen/activity_horizontal_margin125"
+                android:layout_marginTop="@dimen/activity_horizontal_margin25"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                />
+            <!--扫描开始订单-->
+            <TextView
+                android:id="@+id/text_star_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:layout_gravity="center"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_14sp"
+                android:typeface="sans"
+                android:textStyle="normal"
+                android:text="@string/order_QRcode"/>
+
+            <Button
+                android:id="@+id/oreder_preview_commit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin28"
+                android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                android:background="@drawable/go_verify"
+                android:text=""
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

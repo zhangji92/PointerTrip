@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTitle"
+    android:orientation="vertical">
+
+    <include layout="@layout/comment_toolbar" />
+
+    <CheckBox
+        android:id="@+id/check_my_reserve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin5"
+        android:background="@drawable/recerve_check_select"
+        android:button="@null"
+        android:checked="true"
+
+        />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_smart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTitle">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTitle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTitle"
+            android:orientation="vertical"
+
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/refresh_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/colorTitle"
+
+                android:paddingLeft="@dimen/activity_horizontal_margin5"
+                android:paddingRight="@dimen/activity_horizontal_margin5"
+                android:scrollbars="none" />
+
+            <include layout="@layout/empty" />
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTitle" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <include layout="@layout/public_verify"/>
+</LinearLayout>

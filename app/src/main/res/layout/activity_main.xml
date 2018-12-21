@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frame_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin1"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin50"
+            android:background="@color/line" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin50"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorTitle"
+        android:alpha="0.8"
+        android:clipChildren="false">
+
+        <LinearLayout
+            android:id="@+id/rb_main"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin50"
+            android:layout_alignParentBottom="true"
+            android:clipChildren="false"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/road_book"
+                    style="@style/rb_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:drawableTop="@drawable/select_main_look_world"
+                    android:text="看世界" />
+
+                <ImageView
+                    android:id="@+id/action_result_dot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/road_book"
+                    android:src="@mipmap/action"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/goto_travel"
+                    style="@style/rb_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/select_main_goto_travel"
+                    android:text="出发吧" />
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clipChildren="false">
+                <!--<RadioButton-->
+                <!--android:id="@+id/look_world"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--style="@style/rb_style"-->
+                <!--android:drawableTop="@drawable/select_main_book"-->
+                <!--android:text="拍世界" /> -->
+                <RadioButton
+                    android:id="@+id/look_world"
+                    style="@style/rb_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:drawableTop="@mipmap/icon_taketheworld" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/make_monkey"
+                    style="@style/rb_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/select_main_make_monkey"
+                    android:text="赚一赚" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mine_relat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/mine"
+                    style="@style/rb_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/select_main_mine"
+                    android:text="我" />
+
+                <ImageView
+                    android:id="@+id/action_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/mine"
+                    android:src="@mipmap/action"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

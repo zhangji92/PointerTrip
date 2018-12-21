@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/comment_toolbar"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin40"
+    >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ENDING TIME"
+                android:textColor="@color/continue_play"
+                android:gravity="center"
+                android:textSize="@dimen/activity_text_size16"
+        />
+        <TextView
+                android:id="@+id/continue_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/current_time"
+                android:textSize="@dimen/activity_text_size16"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+        />
+    </LinearLayout>
+    <yc.pointer.trip.view.CustomCircleImage
+            android:id="@+id/continue_head"
+            android:layout_width="@dimen/activity_horizontal_margin110"
+            android:layout_height="@dimen/activity_horizontal_margin110"
+            android:layout_marginTop="@dimen/activity_horizontal_margin35"
+            android:layout_gravity="center"
+    />
+    <TextView
+            android:id="@+id/continue_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/activity_text_size14"
+            android:layout_gravity="center"
+            android:textColor="@color/foot_header_item_text"
+            android:layout_marginTop="@dimen/activity_horizontal_margin20"
+
+    />
+    <TextView
+            android:id="@+id/continue_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/activity_text_size20"
+            android:layout_gravity="center"
+            android:textColor="@color/foot_header_item_text"
+            android:layout_marginTop="@dimen/activity_horizontal_margin8"
+
+    />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_horizontal_margin30"
+
+    >
+        <TextView android:layout_width="0dp"
+                  android:typeface="sans"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:text="@string/time"
+                  android:textSize="@dimen/activity_text_size16"
+                  android:gravity="center"
+        />
+        <TextView android:layout_width="0dp"
+                  android:typeface="sans"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:text="@string/total_amount"
+                  android:textSize="@dimen/activity_text_size16"
+                  android:gravity="center"
+        />
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+
+    >
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin25"
+                android:layout_marginRight="@dimen/activity_horizontal_margin50"
+        >
+            <Button
+                    android:id="@+id/continue_sub"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="-"
+                    android:textSize="@dimen/activity_text_size40"
+                    android:background="@null"
+                    android:textColor="@color/read_header_text"
+                    android:gravity="center"
+            />
+            <TextView
+                    android:id="@+id/continue_time_texe"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="@dimen/activity_text_size20"
+                    android:textColor="@color/foot_header_item_text"
+            />
+            <Button
+                    android:id="@+id/continue_add"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="+"
+                    android:textSize="@dimen/activity_text_size25"
+                    android:background="@null"
+                    android:textColor="@color/read_header_text"
+                    android:gravity="center"
+            />
+        </LinearLayout>
+        <TextView
+                android:id="@+id/total_monkey"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="@color/order_text_pic"
+                android:textSize="@dimen/activity_text_size16"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/activity_text_size20"
+        />
+    </LinearLayout>
+    <Button
+            android:id="@+id/continue_commint"
+            android:layout_width="@dimen/activity_horizontal_margin100"
+            android:layout_height="@dimen/activity_horizontal_margin35"
+            android:background="@drawable/pay_again"
+            android:text="@string/continue_conmmint"
+            android:textColor="@color/colorback"
+            android:textSize="@dimen/activity_text_size16"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin60"
+            android:elevation="@dimen/activity_horizontal_margin3"
+
+
+    />
+
+</LinearLayout>

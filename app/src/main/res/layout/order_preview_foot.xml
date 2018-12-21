@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin24"
+        android:layout_marginRight="@dimen/activity_horizontal_margin24"
+        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin35"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+        <Button
+            android:id="@+id/preview_bnt"
+            android:layout_width="@dimen/activity_horizontal_margin135"
+            android:layout_height="@dimen/activity_horizontal_margin35"
+            android:background="@mipmap/button_jianbian"
+            android:gravity="center"
+            android:text="提交"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <Button
+            android:id="@+id/recompose_order"
+            android:layout_width="@dimen/activity_horizontal_margin135"
+            android:layout_height="@dimen/activity_horizontal_margin35"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+            android:background="@drawable/order_preview_bnt"
+            android:gravity="center"
+            android:text="修改"
+            android:textColor="@color/read_header_text"
+            android:textSize="@dimen/text_size_16sp" />
+    </LinearLayout>
+</LinearLayout>

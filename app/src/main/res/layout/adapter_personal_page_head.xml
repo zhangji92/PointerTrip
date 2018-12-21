@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTitle"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/personal_head_relativeH"
+        android:layout_width="match_parent"
+        android:layout_height="320dp">
+
+        <ImageView
+            android:id="@+id/personal_head_back"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:scaleType="fitXY" />
+
+        <RelativeLayout
+            android:id="@+id/personal_head_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+            android:layout_marginRight="@dimen/activity_horizontal_margin20"
+            android:layout_marginTop="@dimen/activity_horizontal_margin70"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="@dimen/activity_horizontal_margin95"
+                android:layout_height="@dimen/activity_horizontal_margin95">
+
+                <yc.pointer.trip.view.CustomCircleImage
+                    android:id="@+id/personal_head_head"
+                    android:layout_width="@dimen/activity_horizontal_margin95"
+                    android:layout_height="@dimen/activity_horizontal_margin95" />
+
+                <ImageView
+                    android:id="@+id/personal_head_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                    android:src="@mipmap/make_man" />
+            </RelativeLayout>
+
+            <ImageView
+                android:src="@mipmap/personal_page_edit"
+                android:id="@+id/personal_head_edit"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/activity_horizontal_margin16" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/personal_head_nick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personal_head_relative"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+            android:layout_marginTop="@dimen/activity_horizontal_margin28"
+            android:text="缘分天空中会飞的鱼"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <TextView
+            android:id="@+id/personal_head_autograph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/personal_head_nick"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+            android:layout_marginRight="@dimen/activity_horizontal_margin30"
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+            android:text="aaaaa"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <View
+            android:id="@+id/personal_head_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/personal_head_autograph"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+            android:background="@color/colorTitle" />
+
+        <TextView
+            android:id="@+id/personal_head_local"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/personal_head_view"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin16"
+            android:background="@drawable/personal_head_local"
+            android:gravity="center"
+            android:text="天津"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/activity_text_size18" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/personal_head_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/personal_head_relativeH"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/personal_head_follow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/video_text"
+            android:textSize="@dimen/activity_text_size20" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="28dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/personal_head_fans"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/video_text"
+            android:textSize="@dimen/activity_text_size20" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/personal_head_view_back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin10"
+        android:layout_below="@id/personal_head_linear"
+        android:background="@color/wrate_video" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/personal_head_view_back"
+        android:background="@color/colorTitle"
+        android:paddingBottom="@dimen/activity_text_size20"
+        android:paddingLeft="@dimen/activity_horizontal_margin16"
+        android:paddingTop="@dimen/activity_text_size20"
+        android:text="全部作品"
+        android:textColor="@color/text"
+        android:textSize="@dimen/activity_text_size20" />
+</RelativeLayout>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/city_cancel"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                android:textSize="@dimen/activity_horizontal_margin16"
+                android:text="取消"
+                android:textColor="@color/home_bar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/city_sure"
+                android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                android:gravity="right"
+                android:textSize="@dimen/activity_horizontal_margin16"
+                android:text="选择"
+                android:textColor="@color/home_bar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+            android:layout_marginTop="@dimen/activity_horizontal_margin30"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin30"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.wx.wheelview.widget.WheelView
+                android:id="@+id/wheel_main"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+        <com.wx.wheelview.widget.WheelView
+                android:id="@+id/wheel_sub"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

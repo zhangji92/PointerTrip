@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorback"
+    android:orientation="vertical"
+    tools:context="yc.pointer.trip.activity.SearchActivity">
+
+    <include
+        layout="@layout/search_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/hot_search_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+        android:text="@string/hot_search"
+        android:textColor="@color/history_search"
+        android:textSize="@dimen/activity_text_size16"
+        android:textStyle="bold" />
+
+    <GridView
+        android:id="@+id/gv_hot_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:padding="@dimen/activity_horizontal_margin10"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/activity_horizontal_margin10"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/history_search_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin6"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+            android:layout_weight="1"
+            android:text="@string/history_search"
+            android:textColor="@color/history_search"
+            android:textSize="@dimen/activity_text_size16"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/clear_history_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/activity_text_size16"
+            android:drawableLeft="@mipmap/empty"
+            android:drawablePadding="@dimen/activity_horizontal_margin5"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/clear_history_search"
+            android:textColor="@color/history_search"
+            android:textSize="@dimen/activity_text_size14"
+
+            />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gv_history_search_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:padding="@dimen/activity_horizontal_margin10"
+        android:scrollbars="none"
+        android:verticalSpacing="@dimen/activity_horizontal_margin10"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/search_retrieval"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+        android:gravity="center"
+        android:text="未检索到您需要的路书"
+        android:visibility="gone" />
+
+
+    <include layout="@layout/refresh_smart" />
+
+    <ListView
+        android:id="@+id/search_advice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+</LinearLayout>

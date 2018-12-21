@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTitle"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin18"
+        android:layout_marginTop="@dimen/activity_text_size16"
+        android:text="视频举报原因"
+        android:textColor="@color/video_reporting_text"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/share_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_shareCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="20dp"
+        android:textColor="@color/text"
+        android:textSize="16dp" />
+</LinearLayout>

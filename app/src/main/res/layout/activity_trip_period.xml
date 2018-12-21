@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorTitle"
+    android:orientation="vertical"
+    android:id="@+id/activity_trip_period_auto"
+    android:layout_height="135dp">
+
+    <View
+        android:background="@color/wrate_video"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin10"/>
+    <LinearLayout
+        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+        android:id="@+id/activity_trip_all_linear"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/activity_horizontal_margin20"
+            android:layout_height="28dp"
+            android:background="@color/activity_text" />
+
+        <TextView
+            android:id="@+id/activity_trip_period_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="本期精彩"
+            android:textColor="@color/foot_header_item_text"
+            android:textSize="@dimen/text_size_20sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_below="@id/activity_trip_all_linear">
+        <LinearLayout
+            android:id="@+id/activity_trip_period_linear"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin12"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/trip_day"
+                android:text=""
+                android:textColor="@color/foot_header_item_text"
+                android:textSize="@dimen/activity_horizontal_margin20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/activity_trip_period_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-1dp"
+                android:text=""
+                android:textColor="@color/foot_header_item_text" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/activity_trip_period_img"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+            android:layout_toRightOf="@id/activity_trip_period_linear"
+            android:background="@mipmap/period_line" />
+
+        <TextView
+            android:id="@+id/activity_trip_period_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+            android:layout_marginTop="@dimen/activity_horizontal_margin12"
+            android:layout_toEndOf="@id/activity_trip_period_img"
+            android:textColor="@color/foot_header_item_text"
+            android:textSize="@dimen/activity_horizontal_margin20" />
+
+
+        <TextView
+            android:id="@+id/activity_trip_period_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_trip_period_title"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+            android:layout_toEndOf="@id/activity_trip_period_img"
+            android:textSize="@dimen/activity_horizontal_margin14" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

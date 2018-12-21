@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="选择付款方式"
+            android:textColor="@color/back_normal"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <ImageView
+
+            android:id="@+id/member_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/logo"
+            android:src="@mipmap/icon_close" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+        android:layout_marginTop="@dimen/activity_horizontal_margin12"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/icon_weiixn_cz"
+            android:drawablePadding="@dimen/activity_horizontal_margin12"
+            android:text="微信支付"
+            android:textColor="@color/back_normal" />
+
+        <CheckBox
+            android:id="@+id/member_wechat"
+            style="@style/newUn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+        android:layout_marginTop="@dimen/activity_horizontal_margin12"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/icon_zhifubao_cz"
+            android:drawablePadding="@dimen/activity_horizontal_margin12"
+            android:text="支付宝支付"
+            android:textColor="@color/back_normal" />
+
+        <CheckBox
+            android:id="@+id/member_alipay"
+            style="@style/newUn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/member_select"
+            style="@style/checkRulesStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/member_explanation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+            android:gravity="left|center"
+            android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+            android:text="@string/deposit_rule"
+            android:textColor="@color/got_ravel_text"
+            android:textSize="@dimen/activity_text_size14" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/member_pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin45"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin20"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+        android:background="@drawable/comment_button"
+        android:text="@string/pay"
+        android:textColor="@color/colorback"
+        android:textSize="@dimen/text_size_18sp" />
+</LinearLayout>

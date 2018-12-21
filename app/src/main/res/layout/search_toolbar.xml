@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+
+    >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@id/standard_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@mipmap/goback"
+        app:theme="@style/toolbar_theme"
+        tools:ignore="Overdraw">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                android:background="@null"
+                android:drawablePadding="@dimen/activity_horizontal_margin8"
+                android:hint="@string/edit_search_hint"
+                android:maxLines="1"
+                android:paddingBottom="@dimen/activity_horizontal_margin10"
+                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                android:textColor="@color/text"
+                android:textColorHint="@color/view_back"
+                android:textSize="@dimen/activity_text_size18" />
+
+            <ImageView
+                android:id="@+id/search_commint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/edit_search"
+                android:src="@mipmap/icon_search_ss" />
+
+            <ImageView
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_search"
+                android:layout_marginTop="-12dp"
+                android:src="@mipmap/img_search_dow" />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+</LinearLayout>

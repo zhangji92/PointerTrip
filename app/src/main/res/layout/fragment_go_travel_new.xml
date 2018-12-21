@@ -1,0 +1,516 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTitle"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context="yc.pointer.trip.fragment.GoTravelFragment">
+
+
+    <yc.pointer.trip.view.FadingScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin190">
+
+                <ImageView
+                    android:id="@+id/city_back_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_tianjin" />
+
+                <ImageView
+                    android:id="@+id/city_back_blurry"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_mask_blue" />
+
+                <LinearLayout
+                    android:id="@+id/liner_price_messg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin15"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_horizontal_margin10"
+                    android:paddingRight="@dimen/activity_horizontal_margin10">
+
+                    <TextView
+                        android:id="@+id/history_go_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:lineSpacingExtra="@dimen/activity_horizontal_margin2"
+                        android:text="@string/alread_publish_num"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:typeface="serif"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/city_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:lineSpacingExtra="@dimen/activity_horizontal_margin2"
+                        android:text="@string/city_price"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:typeface="serif"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/liner_price_messg"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin15"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin10"
+                    android:paddingRight="@dimen/activity_horizontal_margin10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:lineSpacingExtra="@dimen/activity_horizontal_margin2"
+                        android:text="@string/destination"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:typeface="serif" />
+
+                    <TextView
+                        android:id="@+id/location_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                        android:drawablePadding="@dimen/activity_horizontal_margin8"
+                        android:drawableRight="@mipmap/icon_more_start"
+                        android:lineSpacingExtra="@dimen/activity_horizontal_margin2"
+                        android:text="@string/citys_destination"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold"
+                        android:typeface="sans" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                android:paddingRight="@dimen/activity_horizontal_margin10">
+
+                <TextView
+                    android:id="@+id/hot_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin16"
+                    android:text="@string/hot_senic"
+                    android:textColor="@color/back_normal"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+                <!-- 热门景点 展示列表-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/hot_senic_recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_horizontal_margin1"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin15"
+                    android:background="@color/line" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin16"
+                    android:text="@string/go_title"
+                    android:textColor="@color/back_normal"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+
+                <!-- 出发吧订单基础信息 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin15"
+                    android:background="@drawable/go_travel_back"
+                    android:paddingBottom="@dimen/activity_horizontal_margin10"
+                    android:paddingLeft="@dimen/activity_horizontal_margin12"
+                    android:paddingRight="@dimen/activity_horizontal_margin12"
+                    android:paddingTop="@dimen/activity_horizontal_margin10">
+                    <!--出行日期-->
+                    <LinearLayout
+                        android:id="@+id/linear_go_date"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chose_date"
+                            android:textColor="@color/mine_item"
+                            android:textSize="@dimen/activity_text_size14"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/go_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                            android:text=""
+                            android:textColor="@color/new_my_money_button"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/activity_horizontal_margin1"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/icon_blue_dottedline" />
+                    <!--出行人数-->
+                    <LinearLayout
+                        android:id="@+id/liner_go_people_num"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chose_people_count"
+                            android:textColor="@color/mine_item"
+                            android:textSize="@dimen/activity_text_size14"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/go_people_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                            android:text="1人"
+                            android:textColor="@color/new_my_money_button"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/activity_horizontal_margin1"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/icon_blue_dottedline" />
+                    <!--出行时长-->
+                    <LinearLayout
+                        android:id="@+id/linear_go_duration"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/travel_time_new"
+                            android:textColor="@color/mine_item"
+                            android:textSize="@dimen/activity_text_size14"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/go_duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                            android:text="小时/天"
+                            android:textColor="@color/new_my_money_button"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin15"
+                    android:background="@drawable/go_travel_back"
+                    android:paddingBottom="@dimen/activity_horizontal_margin10"
+                    android:paddingLeft="@dimen/activity_horizontal_margin12"
+                    android:paddingRight="@dimen/activity_horizontal_margin12"
+                    android:paddingTop="@dimen/activity_horizontal_margin10">
+                    <!--是否需要导游证-->
+                    <LinearLayout
+                        android:id="@+id/liner_choose_guidecard"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/guide_card"
+                            android:textColor="@color/mine_item"
+                            android:textSize="@dimen/activity_text_size14"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/choose_guideCar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                            android:text="需要/否"
+                            android:textColor="@color/new_my_money_button"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/activity_horizontal_margin1"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/icon_blue_dottedline" />
+                    <!--选择接单人性别-->
+                    <LinearLayout
+                        android:id="@+id/linear_choose_sex"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/grab_sex"
+                            android:textColor="@color/mine_item"
+                            android:textSize="@dimen/activity_text_size14"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/choose_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                            android:text="男/女"
+                            android:textColor="@color/new_my_money_button"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/activity_horizontal_margin1"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/icon_blue_dottedline" />
+                    <!--是否需要车接-->
+                    <LinearLayout
+                        android:id="@+id/linear_choose_car"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/transfer"
+                            android:textColor="@color/mine_item"
+                            android:textSize="@dimen/activity_text_size14"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/choose_car"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                            android:text="需要/否"
+                            android:textColor="@color/new_my_money_button"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin15"
+                    android:background="@drawable/go_travel_back"
+                    android:paddingBottom="@dimen/activity_horizontal_margin10"
+                    android:paddingLeft="@dimen/activity_horizontal_margin12"
+                    android:paddingRight="@dimen/activity_horizontal_margin12"
+                    android:paddingTop="@dimen/activity_horizontal_margin10"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/choose_scenic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/chose_scenery_new"
+                        android:textColor="@color/new_my_money_button"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/activity_text_size16"
+                        android:textStyle="normal"
+                        android:typeface="sans"
+                        />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin16"
+                    android:text="@string/requirement"
+                    android:textColor="@color/back_normal"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+
+                <!-- 出发吧订单基础信息 -->
+                <EditText
+                    android:id="@+id/specific"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                    android:background="@drawable/go_travel_back"
+                    android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+                    android:gravity="left"
+                    android:maxLength="50"
+                    android:hint="@string/ed_requirement"
+                    android:paddingLeft="@dimen/activity_horizontal_margin20"
+                    android:paddingRight="@dimen/activity_horizontal_margin5"
+                    android:paddingTop="@dimen/activity_horizontal_margin10"
+                    android:textColor="@color/foot_header_item_text"
+                    android:textSize="@dimen/activity_text_size14" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin36"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/check_rules"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/checkRulesStyle"
+                         />
+
+                    <TextView
+                        android:id="@+id/rules"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin7"
+                        android:gravity="left|center"
+                        android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+                        android:text="@string/rule"
+                        android:textColor="@color/got_ravel_text"
+                        android:textSize="@dimen/activity_text_size14" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/button_go_travel_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_horizontal_margin45"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin30"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                    android:background="@drawable/go_verify"
+                    android:text="下一步"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </yc.pointer.trip.view.FadingScrollView>
+
+    <!-- 导航栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:color/transparent">
+
+
+        <View
+            android:id="@+id/nac_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTitle"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/tool_bar_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/img_greyshades_top"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/scenic_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin15"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+            android:layout_marginRight="@dimen/activity_horizontal_margin14"
+            android:layout_toLeftOf="@+id/scan_gotravel"
+            android:background="@null"
+            android:src="@mipmap/img_search_start" />
+
+        <ImageView
+            android:id="@+id/scan_gotravel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin18"
+            android:layout_marginRight="@dimen/activity_horizontal_margin10"
+            android:layout_marginTop="@dimen/activity_horizontal_margin15"
+            android:src="@mipmap/icon_flicking_white" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

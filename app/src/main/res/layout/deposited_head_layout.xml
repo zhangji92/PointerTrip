@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="您当前正在享受以下权益"
+    android:textSize="@dimen/text_size_22sp"
+    android:textColor="@color/foot_header_item_text"
+    android:typeface="sans"
+    android:layout_marginTop="@dimen/activity_horizontal_margin30"
+    android:layout_marginBottom="@dimen/activity_horizontal_margin5">
+
+
+</TextView>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/activity_trip_all_auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTitle"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin10"
+        android:background="@color/wrate_video" />
+
+
+    <LinearLayout
+        android:id="@+id/activity_trip_all_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_horizontal_margin12"
+        android:paddingTop="@dimen/activity_horizontal_margin12">
+
+        <View
+            android:layout_width="@dimen/activity_horizontal_margin8"
+            android:layout_height="28dp"
+            android:background="@color/activity_text" />
+
+        <TextView
+            android:id="@+id/activity_trip_all_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/text_size_20sp"
+            android:text="全部活动"
+            android:textColor="@color/foot_header_item_text" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/activity_trip_all_img"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:adjustViewBounds="false"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="-20dp"
+        android:background="@mipmap/activity_trip_all"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin12"
+            android:layout_marginTop="@dimen/activity_horizontal_margin20"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_trip_all_one"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/activity_trip_all_oneTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:textColor="@color/foot_header_item_text"
+                android:textSize="@dimen/activity_horizontal_margin16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin8"
+            android:layout_marginTop="@dimen/activity_horizontal_margin20"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_trip_all_two"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/activity_trip_all_twoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:textColor="@color/foot_header_item_text"
+                android:textSize="@dimen/activity_horizontal_margin16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin8"
+            android:layout_marginRight="@dimen/activity_horizontal_margin12"
+            android:layout_marginTop="@dimen/activity_horizontal_margin20"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_trip_all_three"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/activity_trip_all_threeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:textColor="@color/foot_header_item_text"
+                android:textSize="@dimen/activity_horizontal_margin16" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

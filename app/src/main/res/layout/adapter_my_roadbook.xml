@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/item_myBook"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/colorback"
+             >
+
+
+    <ImageView
+            android:id="@+id/road_bill_img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin180"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/no_photo"/>
+
+    <TextView
+            android:id="@+id/road_bill_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:text="青海湖"
+            android:textSize="20sp"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+        <TextView
+                android:id="@+id/road_bill_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="11dp"
+                android:layout_weight="1"
+                android:text="最新更新时间 2017-01-28 17:53:20"
+                android:textColor="@color/foot_header_item_text"
+                android:textSize="@dimen/activity_text_size12"/>
+
+        <TextView
+                android:id="@+id/road_bill_browse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="11dp"
+                android:drawableLeft="@mipmap/road_browses"
+                android:drawablePadding="8dp"
+                android:textColor="@color/foot_header_item_text"
+                android:text="2506"/>
+
+        <TextView
+                android:id="@+id/road_bill_collection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="11dp"
+                android:layout_marginTop="11dp"
+                android:drawableLeft="@mipmap/fabulous"
+                android:drawablePadding="8dp"
+                android:textColor="@color/foot_header_item_text"
+                android:text="1506"
+                android:textSize="@dimen/activity_text_size14"
+        />
+
+    </LinearLayout>
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/road_line"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+    />
+</LinearLayout>

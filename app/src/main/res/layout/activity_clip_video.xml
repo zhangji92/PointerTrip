@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/comment_toolbar" />
+
+    <yc.pointer.trip.view.EmptyControlVideo
+        android:id="@+id/clip_video_control"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin80"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin2"
+        android:layout_marginTop="@dimen/activity_horizontal_margin2">
+
+        <yc.pointer.trip.view.HorizontalView
+            android:id="@+id/clip_video_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/clip_video_linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+
+        </yc.pointer.trip.view.HorizontalView>
+
+        <yc.pointer.trip.view.VideoSeekBar
+            android:id="@+id/clip_video_seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+</LinearLayout>

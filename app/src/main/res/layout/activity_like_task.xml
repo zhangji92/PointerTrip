@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/comment_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/like_banner"
+                android:layout_width="match_parent"
+                android:layout_height="152dp"
+                android:contentDescription="@string/logo"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                android:layout_marginTop="@dimen/activity_horizontal_margin16"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/like_like_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@mipmap/icon_zan_td"
+                        android:drawablePadding="@dimen/activity_horizontal_margin4"
+                        android:gravity="center"
+                        android:text="点赞视频 :"
+                        android:textColor="@color/back_normal"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <TextView
+                        android:id="@+id/like_like_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                        android:gravity="center"
+                        android:text="321"
+                        android:textColor="@color/new_my_money_button"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <TextView
+                        android:id="@+id/like_like_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="条"
+                        android:textColor="@color/back_normal"
+                        android:textSize="@dimen/text_size_15sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/photoPackDivider" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin5"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/like_income_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@mipmap/icon_money_t"
+                        android:drawablePadding="@dimen/activity_horizontal_margin4"
+                        android:gravity="center"
+                        android:text="当前收益 :"
+                        android:textColor="@color/back_normal"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <TextView
+                        android:id="@+id/like_income_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                        android:gravity="center"
+                        android:text="32.1"
+                        android:textColor="@color/new_my_money_button"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <TextView
+                        android:id="@+id/like_income_unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="元"
+                        android:textColor="@color/back_normal"
+                        android:textSize="@dimen/text_size_15sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/activity_horizontal_margin16"
+                android:background="@mipmap/box_countdown"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin2"
+                    android:text="任务结束倒计时:"
+                    android:textColor="@color/task_time_text"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <yc.pointer.trip.view.CountDownView
+                    android:id="@+id/like_countdown"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin5"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin2"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/task_time_text"
+                    android:textSize="@dimen/text_size_16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="173dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                android:layout_marginTop="@dimen/activity_horizontal_margin16"
+                android:background="@mipmap/box_ranking">
+
+                <TextView
+                    android:id="@+id/like_leaderboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                    android:text="收益排行榜"
+                    android:textColor="@color/task_time_text"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <LinearLayout
+
+                    android:id="@+id/like_message_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/like_leaderboard"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin16"
+                    android:gravity="center_horizontal"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:paddingLeft="@dimen/activity_horizontal_margin50"
+                        android:text="用户信息"
+                        android:textColor="@color/back_normal"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/activity_horizontal_margin20"
+                        android:text="收益(元)"
+                        android:textColor="@color/back_normal"
+                        android:textSize="@dimen/text_size_16sp" />
+                </LinearLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/like_leaderboard_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/like_message_group"
+                    android:scrollbars="none" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/like_legend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                android:text="温馨提示:每条视频仅可获取一次点赞收益，用户需在当天任务结束后24点之前手动领取相应收益，次日当前收益清零。"
+                android:textColor="@color/task_prompt"
+                android:textSize="@dimen/activity_text_size14" />
+
+            <Button
+                android:id="@+id/like_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin14"
+                android:layout_marginTop="@dimen/activity_horizontal_margin14"
+                android:background="@mipmap/bt_tast"
+                android:gravity="center" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

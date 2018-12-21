@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+    android:layout_marginRight="@dimen/activity_horizontal_margin25"
+    android:layout_marginBottom="@dimen/activity_horizontal_margin20"
+    android:layout_marginTop="@dimen/activity_horizontal_margin20"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/icon_notice" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin6"
+        android:layout_marginTop="@dimen/activity_horizontal_margin16"
+        android:src="@mipmap/img_triangle_gray" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/system_message_back"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_horizontal_margin16"
+        android:paddingLeft="@dimen/activity_horizontal_margin16"
+        android:paddingRight="@dimen/activity_horizontal_margin18"
+        android:paddingTop="@dimen/activity_horizontal_margin16">
+<!--消息内容-->
+        <TextView
+            android:id="@+id/message_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+            android:text="您的游记“美丽的拉萨就在眼前，真是好漂亮啊！”被选为精选视频"
+            android:textColor="@color/back_normal"
+            android:textSize="@dimen/activity_text_size16"
+            android:textStyle="normal"
+            android:typeface="sans" />
+
+        <LinearLayout
+            android:id="@+id/book_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin20"
+            android:background="@color/colorTitle"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/activity_horizontal_margin9"
+            android:paddingLeft="@dimen/activity_horizontal_margin9"
+            android:paddingRight="@dimen/activity_horizontal_margin18"
+            android:paddingTop="@dimen/activity_horizontal_margin9">
+
+            <RelativeLayout
+                android:layout_width="@dimen/activity_horizontal_margin60"
+                android:layout_height="@dimen/activity_horizontal_margin60">
+
+                <ImageView
+                    android:id="@+id/msg_adapter_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/img_tianta" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_play_sy_m" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/book_title"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin12"
+                android:gravity="left|center"
+                android:text="美丽的拉萨就在眼前，真是好漂亮啊！"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textStyle="normal"
+                android:typeface="sans"
+                android:textSize="@dimen/text_size_16sp"
+                android:textColor="@color/back_normal"
+                android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/message_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+            android:text="06-12"
+            android:textSize="@dimen/text_size_16sp"
+            android:typeface="sans"
+            android:textStyle="normal"
+            android:textColor="@color/system_message_date"/>
+
+    </LinearLayout>
+</LinearLayout>

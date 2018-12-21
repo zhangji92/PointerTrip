@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_horizontal_margin20">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin15"
+        android:background="@color/colorTitle"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_horizontal_margin10"
+        android:paddingLeft="@dimen/activity_horizontal_margin15"
+        android:paddingRight="@dimen/activity_horizontal_margin15"
+        android:paddingTop="@dimen/activity_horizontal_margin10"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付宝"
+            android:textColor="@color/foot_header_item_text"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <EditText
+            android:id="@+id/alipay_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:digits="_.@-0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:gravity="center_vertical|right"
+            android:hint="请输入您要提现的支付宝账号"
+            android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+            android:maxLines="1"
+            android:textColor="@color/video_details_button"
+            android:textSize="@dimen/text_size_18sp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin40"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin43"
+        android:layout_marginRight="@dimen/activity_horizontal_margin43"
+        android:layout_marginTop="@dimen/activity_horizontal_margin30"
+        android:background="@drawable/adapter_order_txt"
+        android:gravity="center"
+        android:text="提现"
+        android:textColor="@color/colorhint"
+        android:textSize="@dimen/text_size_20sp" />
+</LinearLayout>

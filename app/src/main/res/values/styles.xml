@@ -1,0 +1,145 @@
+<resources>
+    <!-- Base theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- toolbar theme-->
+    <style name="toolbar_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorControlNormal">@color/status_bar</item>
+    </style>
+    <!-- hometoolbar theme-->
+    <style name="hometoolbar_theme" parent="toolbar_theme">
+        <item name="actionOverflowButtonStyle">@style/ActionButton.Overflow</item>
+        <item name="actionOverflowMenuStyle">@style/ToolbarPopupTheme</item>
+        <!--<item name="android:popupTheme">@style/ToolbarPopupTheme</item>-->
+    </style>
+    <!--动作菜单的按钮，默认为三个点-->
+    <style name="ActionButton.Overflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@mipmap/menu</item>
+    </style>
+    <!--状态栏颜色-->
+    <style name="status_bar_theme" parent="AppTheme.Base">
+        <!-- 隐藏状态栏 -->
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <item name="colorPrimaryDark">@color/colorback</item>
+        <item name="colorPrimary">@color/colorTitle</item>
+        <item name="colorAccent">@color/colorTitle</item>
+        <item name="windowNoTitle">true</item>
+        <!--<item name="colorPrimaryDark">@drawable/backg_order_status</item>-->
+
+    </style>
+    <!--溢出菜单栏样式-->
+    <style name="ToolbarPopupTheme" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+        <!-- 设置弹出菜单文字大小 -->
+        <item name="android:textSize">16sp</item>
+        <item name="android:dropDownWidth">wrap_content</item>
+        <item name="android:dropDownHeight">wrap_content</item>
+        <item name="android:paddingRight">3dp</item>
+        <!-- 弹出层垂直方向上的偏移，即在竖直方向上距离Toolbar的距离，值为负则会盖住Toolbar -->
+        <item name="android:dropDownVerticalOffset">5dp</item>
+        <!-- 弹出层水平方向上的偏移，即距离屏幕左边的距离，负值会导致右边出现空隙 -->
+        <item name="android:dropDownHorizontalOffset">-5dp</item>
+        <!-- 弹出层背景颜色 -->
+        <item name="android:popupBackground">@color/popupmenu</item>
+        <!-- 设置弹出菜单文字颜色 -->
+        <item name="android:textColor">@color/colorTitle</item>
+    </style>
+    <!-- Radiobutton style-->
+    <style name="rb_style">
+
+        <item name="android:button">@null</item>
+        <!--<item name="android:layout_width">0dp</item>-->
+        <!--<item name="android:layout_height">wrap_content</item>-->
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:drawablePadding">5dp</item>
+        <!--<item name="android:layout_marginTop">10dp</item>-->
+        <!--<item name="?android:attr/borderlessButtonStyle">@null</item>-->
+        <item name="android:textColor">@drawable/select_main_tv</item>
+
+    </style>
+    <!--日历风格-->
+    <style name="myschedule_current_month_tv">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="transparentFrameWindowStyle" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/photo_choose_bg</item>
+    </style>
+    <!--dialog动画-->
+    <style name="main_menu_animstyle">
+        <item name="android:windowEnterAnimation">@anim/photo_dialog_in_anim</item>
+
+        <item name="android:windowExitAnimation">@anim/photo_dialog_out_anim</item>
+    </style>
+    <!--ShareBoardDialog格式-->
+    <style name="user_default_dialog" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+        <item name="android:backgroundDimAmount">0.4</item>
+        <!-- 设置窗口的透明度， 0.0~1.0，1表示不透明-->
+    </style>
+
+
+    <!--启动页-->
+    <style name="AppTheme.Launcher" parent="AppTheme">
+        <!-- 通过windowBackground可以设置背景色、背景图片、能解析出图片的XML文件等-->
+        <item name="android:windowBackground">@mipmap/advertingwhite</item>
+        <!--设置没有状态栏-->
+        <item name="windowNoTitle">true</item>
+        <!--设置全屏状态-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="wxPay" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!--Tablayout文字大小-->
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <style name="checkStyle" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/my_money_select_drawable</item>
+    </style>
+
+    <style name="checkRulesStyle" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/check_read_rules</item>
+    </style>
+
+    <style name="newUn" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/new_deposit_check</item>
+    </style>
+
+    <style name="status_bar_theme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="status_bar_theme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

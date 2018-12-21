@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/msg_activity_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin40">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@color/foot_header_item_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/activity_horizontal_margin5">
+
+            <EditText
+                android:textColor="@color/text"
+                android:id="@+id/msg_activity_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                android:layout_weight="1"
+                android:alpha="0.8"
+                android:background="@drawable/video_comment_edit"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="bottom"
+                android:hint="写评论(最多150字)"
+                android:maxLines="2"
+                android:paddingBottom="@dimen/activity_horizontal_margin2"
+                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                android:paddingRight="@dimen/activity_horizontal_margin5"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <Button
+                android:id="@+id/msg_activity_commit"
+                android:layout_width="@dimen/activity_horizontal_margin55"
+                android:layout_height="@dimen/activity_horizontal_margin35"
+                android:layout_marginRight="@dimen/activity_horizontal_margin5"
+                android:background="@drawable/pay_again"
+                android:text="发送"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_size_18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

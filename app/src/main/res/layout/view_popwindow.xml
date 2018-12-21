@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="评价"
+                android:textSize="24sp"/>
+
+        <ImageView
+                android:layout_centerVertical="true"
+                android:src="@mipmap/comment_close"
+                android:id="@+id/comment_cancel"
+                android:layout_width="@dimen/activity_horizontal_margin20"
+                android:layout_height="@dimen/activity_horizontal_margin20"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/activity_horizontal_margin12"/>
+    </RelativeLayout>
+
+    <com.example.xlhratingbar_lib.XLHRatingBar
+            android:layout_gravity="center"
+            xmlns:xlhRatingBar="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            xlhRatingBar:canEdit="true"
+            xlhRatingBar:dividerWidth="5dp"
+            xlhRatingBar:starCount="5"
+            xlhRatingBar:stateResId="@drawable/selector_star"
+            xlhRatingBar:widthAndHeight="30dp"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin12"
+    />
+
+    <TextView
+            android:id="@+id/comment_summary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/start_text"
+            android:textSize="@dimen/text_size_18sp"/>
+
+    <TextView
+            android:id="@+id/comment_kwame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="快来夸夸Ta吧"
+            android:textColor="@color/text_below"
+            android:textSize="@dimen/text_size_16sp"/>
+
+
+    <RelativeLayout
+            android:id="@+id/comment_relative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="11dp">
+
+        <TextView
+                android:maxLength="7"
+                android:ellipsize="end"
+                android:id="@+id/comment_have"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/comment_text_back"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/text_below"
+                android:typeface="monospace"/>
+
+        <TextView
+                android:maxLength="7"
+                android:ellipsize="end"
+                android:id="@+id/comment_kind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/comment_text_back"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/text_below"
+                android:typeface="monospace"/>
+
+        <TextView
+                android:maxLength="7"
+                android:ellipsize="end"
+                android:id="@+id/comment_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/comment_have"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/comment_text_back"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/text_below"
+                android:typeface="monospace"/>
+
+        <TextView
+                android:maxLength="7"
+                android:ellipsize="end"
+                android:id="@+id/comment_vivid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/comment_have"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/comment_text_back"
+                android:paddingBottom="8dp"
+                android:paddingLeft="26dp"
+                android:paddingRight="26dp"
+                android:paddingTop="8dp"
+                android:textColor="@color/text_below"
+                android:typeface="monospace"/>
+    </RelativeLayout>
+
+    <EditText
+            android:id="@+id/comment_opinion"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/comment_vivid"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginTop="@dimen/activity_horizontal_margin20"
+            android:background="@drawable/order_preview_bnt"
+            android:gravity="top"
+            android:hint="其他想说的"
+            android:textColorHint="@color/text_below"
+            android:textSize="@dimen/activity_text_size14"/>
+
+    <Button
+            android:id="@+id/comment_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/backg_order_status"
+            android:padding="10dp"
+            android:text="匿名提交"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/activity_text_size24"/>
+</LinearLayout>

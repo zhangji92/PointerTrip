@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin15"
+>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp">
+
+        <!--        android:src="@mipmap/coupon_back"-->
+        <ImageView
+                android:id="@+id/_adapter_coupon_back"
+                android:scaleType="fitXY"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"/>
+        <!--<TextView-->
+        <!--android:id="@+id/adapter_coupon_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="指针旅行优惠券"-->
+        <!--android:textColor="@color/foot_header_item_text"-->
+        <!--android:textSize="@dimen/activity_text_size20"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/adapter_coupon_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/adapter_coupon_title"-->
+        <!--android:layout_marginLeft="16dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text=""-->
+        <!--android:textColor="@color/foot_header_item_text"-->
+        <!--android:textSize="@dimen/activity_text_size16"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/adapter_coupon_not"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:layout_marginRight="20dp"-->
+        <!--android:text="未使用"-->
+        <!--android:textColor="@color/colorback"-->
+        <!--android:textSize="@dimen/activity_text_size18"/>-->
+
+    </RelativeLayout>
+
+</LinearLayout>

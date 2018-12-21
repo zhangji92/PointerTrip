@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTitle">
+    <include layout="@layout/comment_toolbar"/>
+    <ImageView
+        android:layout_width="@dimen/activity_horizontal_margin120"
+        android:layout_height="@dimen/activity_horizontal_margin120"
+        android:src="@mipmap/change_binding"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/activity_horizontal_margin50"
+        />
+    <TextView
+        android:id="@+id/now_binding_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin60"
+        android:text="@string/binding_number"
+        android:typeface="sans"
+        android:textSize="@dimen/text_size_18sp"
+        android:textColor="@color/foot_header_item_text"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/now_binding_introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+        android:text="@string/binding_introduce"
+        android:textSize="@dimen/text_size_16sp"
+        android:typeface="sans"
+        android:paddingLeft="@dimen/activity_horizontal_margin10"
+        android:paddingRight="@dimen/activity_horizontal_margin10"
+        android:textColor="@color/video_text"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        />
+    <Button
+        android:id="@+id/change_commite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/button_jianbian"
+        android:layout_marginRight="@dimen/activity_horizontal_margin10"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+        android:layout_marginTop="@dimen/activity_horizontal_margin50"
+        android:gravity="center"
+        android:padding="@dimen/activity_horizontal_margin5"
+        android:text="更改手机号"
+        android:textColor="@color/colorTitle"
+        android:textSize="@dimen/text_size_20sp" />
+
+</LinearLayout>

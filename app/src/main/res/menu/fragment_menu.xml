@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <item android:id="@+id/look_book"
+          android:icon="@mipmap/menu"
+          android:title="看游记"
+          android:showAsAction="always"
+    />
+    <item android:id="@+id/create_book"
+          android:title="写游记"
+          android:showAsAction="ifRoom"
+    />
+    <item
+            android:id="@+id/reserve_order"
+            android:title="预约订单"
+            android:showAsAction="ifRoom"
+    />
+    <!--<item-->
+            <!--android:id="@+id/my_book"-->
+            <!--android:title="我的路书"-->
+            <!--android:showAsAction="ifRoom"-->
+    <!--/>-->
+    <!--<item-->
+            <!--android:id="@+id/my_order"-->
+            <!--android:title="我的订单"-->
+            <!--android:showAsAction="ifRoom"-->
+    <!--/>-->
+</menu>

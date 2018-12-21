@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/comment_toolbar"/>
+    <ProgressBar
+            android:progressDrawable="@drawable/progress_back"
+            android:id="@+id/book_details_pro"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin5"
+            style="?android:attr/progressBarStyleHorizontal"/>
+
+    <WebView
+            android:id="@+id/agreement_web"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    <Button
+            android:id="@+id/accept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/button_jianbian"
+            android:text="我知道了"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/activity_horizontal_margin16"/>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/agreement_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/book_details_wifi"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/erro_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/book_details_reload"
+            android:layout_below="@id/book_details_wifi"
+            android:layout_centerInParent="true"
+            android:text="重新加载"
+            android:textColor="@color/read_header_text"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

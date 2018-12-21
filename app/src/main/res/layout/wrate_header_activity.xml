@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/activity_horizontal_margin10"
+            android:paddingLeft="@dimen/activity_horizontal_margin10"
+    >
+
+        <EditText
+                android:hint="@string/edit_title"
+                android:textColorHint="@color/edit_color_hint"
+                android:textSize="@dimen/activity_text_size18"
+                android:background="@null"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:maxLength="30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/write_title"/>
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin2"
+                android:background="@color/line"
+                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+        />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin15"
+                android:orientation="horizontal">
+            <ImageView
+                    android:layout_width="@dimen/activity_horizontal_margin6"
+                    android:layout_height="@dimen/activity_horizontal_margin6"
+                    android:src="@mipmap/blue"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/city"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+                    android:textSize="@dimen/activity_text_size18"
+                    android:textStyle="bold"
+            />
+            <TextView
+                    android:id="@+id/write_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="请选择城市"
+                    android:textSize="@dimen/activity_text_size18"
+                    android:gravity="right"
+                    android:layout_marginRight="20dp"
+            />
+
+        </LinearLayout>
+
+
+        <View
+                android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin2"
+                android:background="@color/line"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin18"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin15"
+                android:orientation="horizontal">
+            <ImageView
+                    android:layout_width="@dimen/activity_horizontal_margin6"
+                    android:layout_height="@dimen/activity_horizontal_margin6"
+                    android:src="@mipmap/yellow"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+            />
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/property"
+                    android:layout_gravity="center"
+                    android:gravity="left"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+                    android:textSize="@dimen/activity_text_size18"
+                    android:textStyle="bold"
+            />
+            <Spinner
+                    android:id="@+id/write_spinner"
+                    android:layout_width="96dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/sort"
+                    android:spinnerMode="dropdown"
+                    android:dropDownWidth="80dp"
+                    android:layout_gravity="center"
+                    android:dropDownVerticalOffset="@dimen/activity_horizontal_margin30"
+                    android:alpha="0.6"
+            />
+
+        </LinearLayout>
+
+        <View
+                android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin2"
+                android:background="@color/line"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin18"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:orientation="horizontal"
+        >
+            <ImageView
+                    android:layout_width="@dimen/activity_horizontal_margin6"
+                    android:layout_height="@dimen/activity_horizontal_margin6"
+                    android:src="@mipmap/green"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scenery"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+                    android:textSize="@dimen/activity_text_size18"
+                    android:textStyle="bold"
+            />
+            <EditText
+                    android:id="@+id/write_scenic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ed_city"
+                    android:background="@null"
+                    android:textColorHint="@color/edit_color_hint"
+                    android:textSize="@dimen/activity_text_size18"
+                    android:gravity="right"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin20"
+            />
+
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin2"
+                android:background="@color/line"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin18"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>

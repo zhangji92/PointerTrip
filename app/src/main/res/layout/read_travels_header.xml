@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTitle"
+    android:orientation="vertical">
+
+
+    <include
+        layout="@layout/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/read_travel_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+        android:layout_marginTop="@dimen/activity_horizontal_margin15"
+        android:text="热门游记"
+        android:textColor="@color/read_header_text"
+        android:textSize="@dimen/activity_text_size18"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/read_travel_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_text_size16"
+        android:layout_marginTop="@dimen/activity_horizontal_margin12" />
+
+    <TextView
+        android:id="@+id/read_travel_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin20"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+        android:layout_marginTop="@dimen/activity_horizontal_margin25"
+        android:text="全部游记"
+        android:textColor="@color/read_header_text"
+        android:textSize="@dimen/activity_text_size18"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/comment_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/deposit_back"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_horizontal_margin8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/rmb_money"
+                    android:drawablePadding="@dimen/activity_horizontal_margin10"
+                    android:text="99"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/text_size_80sp"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin35"
+                        android:gravity="left"
+                        android:text="·会员特权    多重收益"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="·会员特权    更多安全保障"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="·会员特权    定制个性化旅行"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_14sp" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin15"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/spot" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin8"
+                    android:src="@mipmap/spot" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                    android:text="@string/pay_stype"
+                    android:textSize="@dimen/activity_text_size14" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/spot" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin8"
+                    android:src="@mipmap/spot" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radioG_pay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin100"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/activity_horizontal_margin10">
+
+                <RadioButton
+                    android:id="@+id/radioB_alipay"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/select_alipay"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center" />
+
+                <RadioButton
+                    android:id="@+id/radioB_weixin"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                    android:layout_weight="1"
+                    android:background="@drawable/select_pay_weixin"
+                    android:button="@null"
+                    android:gravity="center" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/money_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin32"
+                android:layout_marginRight="@dimen/activity_horizontal_margin32"
+                android:background="@mipmap/img_blueframe"
+                android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+                android:paddingLeft="@dimen/activity_horizontal_margin12"
+                android:paddingRight="@dimen/activity_horizontal_margin10"
+                android:paddingTop="@dimen/activity_horizontal_margin10"
+                android:text="@string/note_deposit"
+                android:textColor="@color/new_my_money_button"
+                android:textSize="@dimen/text_size_14sp"
+                android:typeface="sans" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/check_rules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin32"
+                    android:background="@drawable/demand_selector"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/rules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                    android:gravity="left|center"
+                    android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+                    android:text="@string/deposit_rule"
+                    android:textColor="@color/horizontal_text"
+                    android:textSize="@dimen/activity_text_size14" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom_linear"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+                android:layout_weight="1"
+                android:gravity="bottom">
+
+                <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_above="@id/pay_commit"-->
+                <!--android:layout_marginBottom="@dimen/activity_horizontal_margin25"-->
+                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin10"-->
+                <!--android:layout_marginRight="@dimen/activity_horizontal_margin10"-->
+                <!--android:background="@color/line" />-->
+
+                <Button
+                    android:id="@+id/pay_commit"
+                    android:layout_width="@dimen/activity_horizontal_margin100"
+                    android:layout_height="@dimen/activity_horizontal_margin35"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                    android:background="@drawable/toolbar_bk"
+                    android:text="@string/pay"
+                    android:textColor="@color/colorback"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <Button
+                    android:id="@+id/cancel_order"
+                    android:layout_width="@dimen/activity_horizontal_margin100"
+                    android:layout_height="@dimen/activity_horizontal_margin35"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin15"
+                    android:layout_toLeftOf="@id/pay_commit"
+                    android:background="@drawable/order_preview_bnt"
+                    android:text="取消"
+                    android:textColor="@color/read_header_text"
+                    android:textSize="@dimen/text_size_16sp" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

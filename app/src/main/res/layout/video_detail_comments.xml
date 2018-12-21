@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/comments_main_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin40"
+        android:layout_gravity="bottom"
+        android:background="@color/colorTitle"
+        android:orientation="vertical">
+
+        <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.6"
+        android:background="@color/foot_header_item_text" />
+
+
+        <LinearLayout
+            android:id="@+id/comments_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/activity_horizontal_margin5"
+            android:paddingLeft="@dimen/activity_horizontal_margin18"
+            android:paddingRight="@dimen/activity_horizontal_margin18"
+            android:paddingTop="@dimen/activity_horizontal_margin5"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/edit_comments_bottom"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/video_comment_edit"
+                android:hint="写评论"
+                android:paddingBottom="@dimen/activity_horizontal_margin5"
+                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                android:paddingRight="@dimen/activity_horizontal_margin8"
+                android:paddingTop="@dimen/activity_horizontal_margin5" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5">
+
+                <ImageButton
+                    android:id="@+id/share_video"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@mipmap/share_video" />
+
+                <ImageButton
+                    android:id="@+id/like_video"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@mipmap/like_video_not" />
+
+                <ImageButton
+                    android:id="@+id/collection_video"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@mipmap/collection_video_not" />
+
+                <ImageButton
+                    android:id="@+id/exit_video"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:src="@mipmap/exit_video" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comments_up"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:paddingBottom="@dimen/activity_horizontal_margin5"
+            android:paddingLeft="@dimen/activity_horizontal_margin18"
+            android:paddingRight="@dimen/activity_horizontal_margin18"
+            android:paddingTop="@dimen/activity_horizontal_margin5"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edit_comments_up"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                android:layout_weight="1"
+                android:background="@drawable/video_comment_edit"
+                android:hint="写评论"
+                android:paddingBottom="@dimen/activity_horizontal_margin5"
+                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                android:paddingRight="@dimen/activity_horizontal_margin8"
+                android:paddingTop="@dimen/activity_horizontal_margin5" />
+
+
+            <Button
+                android:id="@+id/comments_publish"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/pay_again"
+                android:text="发送"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_size_18sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

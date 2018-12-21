@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/comment_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+            android:layout_marginRight="@dimen/activity_horizontal_margin10"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                android:layout_marginTop="@dimen/activity_horizontal_margin12"
+                android:text="充值金额"
+                android:textColor="@color/back_normal"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RadioButton
+                    android:id="@+id/new_deposit_nine"
+                    style="@style/rb_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin12"
+                    android:background="@drawable/select_new_deposit_nine"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/new_deposit_three"
+                    style="@style/rb_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin12"
+                    android:background="@drawable/select_new_deposit_three" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin18"
+                android:text="选择付款方式"
+                android:textColor="@color/back_normal"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/icon_weiixn_cz"
+                    android:drawablePadding="@dimen/activity_horizontal_margin12"
+                    android:text="微信支付"
+                    android:textColor="@color/back_normal" />
+
+                <CheckBox
+                    android:id="@+id/new_deposit_wechat_pay"
+                    style="@style/newUn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin12"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@mipmap/icon_zhifubao_cz"
+                    android:drawablePadding="@dimen/activity_horizontal_margin12"
+                    android:text="微信支付"
+                    android:textColor="@color/back_normal" />
+
+                <CheckBox
+                    android:id="@+id/new_deposit_pay"
+                    style="@style/newUn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin32"
+                android:layout_marginRight="@dimen/activity_horizontal_margin32"
+                android:layout_marginTop="@dimen/activity_horizontal_margin14"
+                android:background="@mipmap/img_blueframe"
+                android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+                android:paddingLeft="@dimen/activity_horizontal_margin12"
+                android:paddingRight="@dimen/activity_horizontal_margin10"
+                android:paddingTop="@dimen/activity_horizontal_margin10"
+                android:text="@string/new_note_deposit"
+                android:textColor="@color/new_my_money_button"
+                android:textSize="@dimen/text_size_14sp"
+                android:typeface="sans" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/new_deposit_check_rules"
+                    style="@style/checkRulesStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/new_deposit_rules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                    android:gravity="left|center"
+                    android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+                    android:text="@string/deposit_rule"
+                    android:textColor="@color/got_ravel_text"
+                    android:textSize="@dimen/activity_text_size14" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/new_deposit_commit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin45"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin20"
+                android:background="@drawable/comment_button"
+                android:text="@string/pay"
+                android:textColor="@color/colorback"
+                android:textSize="@dimen/text_size_18sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

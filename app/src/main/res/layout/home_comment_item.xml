@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/activity_horizontal_margin25"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin15">
+
+    <ImageView
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/img_shuxian_blue"
+        />
+    <TextView
+        android:id="@+id/comment_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/text_size_14sp"
+        android:typeface="sans"
+        android:textStyle="normal"
+        android:text="爱旅游的兔子： 我也想去看看"
+        />
+
+
+</LinearLayout>

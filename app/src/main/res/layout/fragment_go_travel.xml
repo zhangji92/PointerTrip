@@ -1,0 +1,916 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorTitle"
+              tools:context="yc.pointer.trip.fragment.GoTravelFragment" android:orientation="vertical"
+              android:baselineAligned="false">
+
+    <include layout="@layout/comment_toolbar"/>
+
+    <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/pic_go_travel"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin15"
+                    android:paddingRight="@dimen/activity_horizontal_margin15">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/star"/>
+
+                    <RelativeLayout
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content">
+
+                        <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin12"
+                                android:src="@mipmap/location"/>
+
+                        <EditText
+                                android:id="@+id/location_city"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/location_city"
+                                android:gravity="center"
+                                android:hint="出发城市"
+                                android:background="@null"
+                                android:textColor="@color/foot_header_item_text"
+                                android:textSize="@dimen/activity_text_size16"/>
+
+                        <ImageView
+                                android:layout_width="130dp"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/location_city"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin12"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                                android:background="@color/line"/>
+                    </RelativeLayout>
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin12"
+                            android:src="@mipmap/point"/>
+
+                    <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        <TextView
+                                android:id="@+id/choose_destination"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:hint="请选择目的地"
+                                android:textColor="@color/history_search"
+                                android:textSize="@dimen/activity_text_size16"/>
+
+                        <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/choose_destination"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                                android:background="@color/line"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/scenery"
+                            android:textColor="@color/foot_header_item_text"
+                            android:textSize="@dimen/activity_text_size16"/>
+
+                    <TextView
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:id="@+id/choose_scenic"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/chose_scenery"
+                            android:textColor="@color/history_search"
+                            android:textSize="@dimen/activity_text_size16"/>
+                </LinearLayout>
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                        android:background="@color/line"/>
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin20"-->
+                <!--android:layout_marginTop="@dimen/activity_horizontal_margin5"-->
+                <!--android:text="@string/notice"-->
+                <!--android:textColor="@color/horizontal_text"-->
+                <!--android:textSize="@dimen/activity_text_size12"/>-->
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/star"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                            android:text="@string/chose_date"
+                            android:textColor="@color/foot_header_item_text"
+                            android:textSize="@dimen/activity_text_size16"/>
+                </LinearLayout>
+
+                <include
+                        layout="@layout/layout_date_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/star"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                            android:text="@string/chose_people_count"
+                            android:textColor="@color/foot_header_item_text"
+                            android:textSize="@dimen/activity_text_size16"/>
+
+                    <EditText
+                            android:id="@+id/travel_count"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:digits="123456"
+                            android:gravity="center|right"
+                            android:hint="@string/ed_people_count"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:textColor="@color/foot_header_item_text"
+                            android:textColorHint="@color/edit_color_hint"
+                            android:textSize="@dimen/activity_text_size16"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="人"
+                            android:textColor="@color/foot_header_item_text"
+                            android:textSize="@dimen/activity_text_size16"
+                    />
+                </LinearLayout>
+
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                        android:background="@color/line"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/star"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                            android:text="@string/travel_time"
+                            android:textColor="@color/foot_header_item_text"
+                            android:textSize="@dimen/activity_text_size16"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        <CheckBox
+                                android:id="@+id/check_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                                android:background="@drawable/checkbox_select"
+                                android:button="@null"
+                                android:checked="true"/>
+
+                        <TextView
+                                android:id="@+id/by_hour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                                android:layout_toRightOf="@id/check_hour"
+                                android:gravity="left"
+                                android:text="按小时"
+                                android:textColor="@color/foot_header_item_text"
+                                android:textSize="@dimen/activity_text_size16"
+                        />
+
+                        <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/by_hour"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin40"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                                android:background="@color/line"/>
+
+                        <EditText
+                                android:id="@+id/time_hour"
+                                android:layout_width="@dimen/activity_horizontal_margin30"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/by_hour"
+                                android:background="@null"
+                                android:digits="12345678"
+                                android:gravity="right"
+                                android:inputType="number"
+                                android:maxLength="1"
+
+                                android:textColor="@color/horizontal_text"
+                                android:textSize="@dimen/activity_text_size16"/>
+
+                        <TextView
+                                android:id="@+id/tv_by_hours"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/time_hour"
+                                android:gravity="right"
+                                android:text="小时"
+                                android:textColor="@color/horizontal_text"
+                                android:textSize="@dimen/activity_text_size16"
+
+                        />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin22"
+                            android:layout_weight="1">
+
+                        <CheckBox
+                                android:id="@+id/check_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin12"
+                                android:background="@drawable/checkbox_select"
+                                android:button="@null"/>
+
+                        <TextView
+                                android:id="@+id/by_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                                android:layout_toRightOf="@id/check_day"
+                                android:gravity="left"
+                                android:text="按天"
+                                android:textColor="@color/foot_header_item_text"
+                                android:textSize="@dimen/activity_text_size16"/>
+
+                        <EditText
+                                android:id="@+id/by_day_price"
+                                android:layout_width="@dimen/activity_horizontal_margin70"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/by_day"
+                                android:background="@null"
+                                android:gravity="right"
+                                android:inputType="number"
+                                android:maxLength="1"
+                                android:digits="123"
+                                android:textColor="@color/horizontal_text"
+                                android:textSize="@dimen/activity_text_size16"
+                        />
+
+                        <TextView
+                                android:id="@+id/tv_by_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@id/by_day_price"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text="天"
+                                android:textColor="@color/horizontal_text"
+                                android:textSize="@dimen/activity_text_size16"
+                        />
+
+                        <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/check_day"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin40"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                                android:background="@color/line"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                        android:orientation="horizontal">
+
+                    <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:src="@mipmap/star"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                            android:text="@string/guide_card"
+                            android:textColor="@color/foot_header_item_text"
+                            android:textSize="@dimen/activity_text_size16"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                        <CheckBox
+                                android:id="@+id/check_unguide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                                android:background="@drawable/checkbox_select"
+                                android:button="@null"
+                                android:checked="true"/>
+
+                        <TextView
+                                android:id="@+id/unneed_guide"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                                android:layout_toRightOf="@id/check_unguide"
+                                android:gravity="left"
+                                android:text="不要求"
+                                android:textColor="@color/foot_header_item_text"
+                                android:textSize="@dimen/activity_text_size16"/>
+
+                        <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/unneed_guide"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin40"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                                android:background="@color/line"/>
+
+                        <TextView
+                                android:id="@+id/unneed_guide_price"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:gravity="right"
+                                android:text="10元"
+                                android:visibility="gone"
+                                android:textColor="@color/horizontal_text"
+                                android:textSize="@dimen/activity_text_size16"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin22"
+                            android:layout_weight="1">
+
+                        <CheckBox
+                                android:id="@+id/check_guide"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin12"
+                                android:background="@drawable/checkbox_select"
+                                android:button="@null"/>
+
+                        <TextView
+                                android:id="@+id/need_guide"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                                android:layout_toRightOf="@id/check_guide"
+                                android:gravity="left"
+                                android:text="要求"
+                                android:textColor="@color/foot_header_item_text"
+                                android:textSize="@dimen/activity_text_size16"/>
+
+                        <TextView
+                                android:id="@+id/need_guide_price"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="right"
+                                android:textColor="@color/horizontal_text"
+                                android:textSize="@dimen/activity_text_size16"
+                                android:visibility="visible"/>
+
+                        <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_below="@id/need_guide"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin40"
+                                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                                android:background="@color/line"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_marginLeft="@dimen/activity_horizontal_margin20"-->
+                        <!--android:layout_marginTop="@dimen/activity_horizontal_margin10"-->
+                        <!--android:text="@string/chose_welcome"-->
+                        <!--android:textColor="@color/foot_header_item_text"-->
+                        <!--android:textSize="@dimen/activity_text_size16"-->
+                <!--/>-->
+
+                <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="@dimen/activity_horizontal_margin10"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:orientation="horizontal">-->
+
+                    <!--<RelativeLayout-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_weight="1">-->
+
+                        <!--<CheckBox-->
+                                <!--android:id="@+id/check_pickup_air"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin20"-->
+                                <!--android:background="@drawable/checkbox_select"-->
+                                <!--android:button="@null"-->
+                                <!--android:checked="true"/>-->
+
+                        <!--<TextView-->
+                                <!--android:id="@+id/pickup_plane"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:layout_centerHorizontal="true"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin5"-->
+                                <!--android:layout_toRightOf="@id/check_pickup_air"-->
+                                <!--android:gravity="left"-->
+                                <!--android:text="接机"-->
+                                <!--android:textColor="@color/foot_header_item_text"-->
+                                <!--android:textSize="@dimen/activity_text_size16"/>-->
+
+                        <!--<TextView-->
+                                <!--android:id="@+id/pickup_plane_price"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:gravity="right"-->
+                                <!--android:text="30元"-->
+                                <!--android:layout_centerHorizontal="true"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:textColor="@color/horizontal_text"-->
+                                <!--android:textSize="@dimen/activity_text_size16"-->
+                                <!--android:layout_alignBottom="@id/pickup_plane"-->
+                        <!--/>-->
+
+                        <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="1dp"-->
+                                <!--android:layout_below="@id/pickup_plane"-->
+                                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin40"-->
+                                <!--android:layout_marginTop="@dimen/activity_horizontal_margin8"-->
+                                <!--android:background="@color/line"/>-->
+                    <!--</RelativeLayout>-->
+
+                    <!--<RelativeLayout-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="@dimen/activity_horizontal_margin22"-->
+                            <!--android:layout_weight="1">-->
+
+                        <!--<CheckBox-->
+                                <!--android:id="@+id/check_pickup_train"-->
+                                <!--android:layout_width="wrap_content"-->
+                                <!--android:layout_height="wrap_content"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin12"-->
+                                <!--android:background="@drawable/checkbox_select"-->
+                                <!--android:button="@null"/>-->
+
+                        <!--<TextView-->
+                                <!--android:id="@+id/pickup_train"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:layout_centerHorizontal="true"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin5"-->
+                                <!--android:layout_toRightOf="@id/check_pickup_train"-->
+                                <!--android:gravity="left"-->
+                                <!--android:text="接站"-->
+                                <!--android:textColor="@color/foot_header_item_text"-->
+                                <!--android:textSize="@dimen/activity_text_size16"/>-->
+
+                        <!--<TextView-->
+                                <!--android:id="@+id/pickup_train_price"-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="match_parent"-->
+                                <!--android:layout_centerHorizontal="true"-->
+                                <!--android:layout_centerVertical="true"-->
+                                <!--android:gravity="right"-->
+                                <!--android:text="300元"-->
+                                <!--android:textColor="@color/horizontal_text"-->
+                                <!--android:textSize="@dimen/activity_text_size16"-->
+                                <!--android:visibility="visible"/>-->
+
+                        <!--<ImageView-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="1dp"-->
+                                <!--android:layout_below="@id/check_pickup_train"-->
+                                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin40"-->
+                                <!--android:layout_marginTop="@dimen/activity_horizontal_margin8"-->
+                                <!--android:background="@color/line"/>-->
+                    <!--</RelativeLayout>-->
+                <!--</LinearLayout>-->
+                <RelativeLayout
+                        android:id="@+id/pickup_time"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin22"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                >
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="接站时间"
+                            android:textColor="@color/foot_header_item_text"
+                            android:textSize="@dimen/text_size_16sp"/>
+
+                    <EditText
+                            android:id="@+id/started_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@null"
+                            android:maxLength="15"
+                            android:maxLines="1"
+                            android:hint="例如：2017-08-26 18:00"
+                            android:inputType="datetime"
+                            android:padding="0dp"
+                            android:textSize="@dimen/text_size_16sp"
+                            android:gravity="center|right"
+                    />
+                </RelativeLayout>
+                <View
+                        android:id="@+id/pickup_line"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin22"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                        android:visibility="gone"
+                />
+
+                <RelativeLayout
+                        android:id="@+id/relative_sex"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10">
+                    <CheckBox
+                            android:id="@+id/check_pickup_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/checkbox_select"
+                            android:button="@null"
+                            android:checked="false"/>
+                    <TextView
+                            android:layout_toRightOf="@id/check_pickup_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:text="接单人性别"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                            android:textColor="@color/foot_header_item_text"
+                            android:textSize="@dimen/activity_text_size16"/>
+                    <!--<LinearLayout-->
+                    <!--android:id="@+id/liner_sex"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:visibility="gone"-->
+                    <!--&gt;-->
+                    <!--<CheckBox-->
+
+                    <!--android:id="@+id/check_sex_man"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin20"-->
+                    <!--android:background="@drawable/checkbox_select"-->
+                    <!--android:button="@null"-->
+                    <!--android:checked="false"-->
+                    <!--/>-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/man"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin10"-->
+                    <!--android:layout_toRightOf="@id/check_sex_man"-->
+                    <!--android:gravity="left"-->
+                    <!--android:text="男"-->
+                    <!--android:textColor="@color/foot_header_item_text"-->
+                    <!--android:textSize="@dimen/activity_text_size16"-->
+                    <!--android:layout_alignParentRight="true"/>-->
+                    <!--<CheckBox-->
+
+                    <!--android:id="@+id/check_sex_women"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin8"-->
+                    <!--android:background="@drawable/checkbox_select"-->
+                    <!--android:button="@null"-->
+                    <!--android:checked="false"-->
+                    <!--/>-->
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/women"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="@dimen/activity_horizontal_margin10"-->
+                    <!--android:layout_toRightOf="@id/check_sex_women"-->
+                    <!--android:gravity="left"-->
+                    <!--android:text="女"-->
+                    <!--android:textColor="@color/foot_header_item_text"-->
+                    <!--android:textSize="@dimen/activity_text_size16"-->
+                    <!--/>-->
+                    <!--</LinearLayout>-->
+                    <RadioGroup
+                            android:id="@+id/liner_sex"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal"
+                            android:visibility="gone"
+                    >
+
+                        <RadioButton
+                                android:id="@+id/check_sex_man"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/checkbox_select"
+                                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                                android:text="男"
+                                android:textSize="@dimen/activity_text_size16"
+                                android:textColor="@color/foot_header_item_text"
+                                android:checked="true"
+                        />
+
+                        <RadioButton
+                                android:id="@+id/check_sex_women"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                                android:button="@drawable/checkbox_select"
+                                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                                android:text="女"
+                                android:textSize="@dimen/activity_text_size16"
+                                android:textColor="@color/foot_header_item_text"/>
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <View
+                        android:id="@+id/line_sex"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin22"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/line"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                />
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+
+                >
+                    <CheckBox
+                            android:id="@+id/check_rules"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/demand_selector"
+                            android:button="@null"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                    />
+                    <TextView
+                            android:id="@+id/rules"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                            android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+                            android:text="@string/rule"
+                            android:textColor="@color/horizontal_text"
+                            android:textSize="@dimen/activity_text_size14"/>
+                </LinearLayout>
+
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                        android:text="@string/requirement"
+                        android:textColor="@color/foot_header_item_text"
+                        android:textSize="@dimen/activity_text_size16"/>
+
+                <EditText
+                        android:id="@+id/specific"
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                        android:background="@null"
+                        android:gravity="left"
+                        android:hint="@string/ed_requirement"
+                        android:paddingLeft="@dimen/activity_horizontal_margin20"
+                        android:paddingRight="@dimen/activity_horizontal_margin5"
+                        android:paddingTop="@dimen/activity_horizontal_margin10"
+                        android:textColor="@color/foot_header_item_text"
+                        android:textSize="@dimen/activity_text_size14"/>
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/start_order"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin15"
+                    android:background="@mipmap/login_login"
+                    android:paddingBottom="10dp"
+                    android:text="@string/commit_order"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/activity_text_size16"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<LinearLayout-->
+            <!--android:id="@+id/layout_unlogin"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:visibility="gone"-->
+    <!--&gt;-->
+
+        <!--<ImageView-->
+                <!--android:layout_width="@dimen/activity_horizontal_margin165"-->
+                <!--android:layout_height="@dimen/activity_horizontal_margin165"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="@dimen/activity_horizontal_margin90"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@mipmap/un_login_people"-->
+
+        <!--/>-->
+
+        <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="@dimen/activity_horizontal_margin25"-->
+                <!--android:text="@string/unlogin_notice"-->
+                <!--android:textColor="@color/read_header_text"-->
+                <!--android:textSize="@dimen/activity_text_size20"-->
+        <!--/>-->
+
+        <!--<Button-->
+                <!--android:id="@+id/go_login"-->
+                <!--android:layout_width="@dimen/activity_horizontal_margin140"-->
+                <!--android:layout_height="@dimen/activity_horizontal_margin40"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="@dimen/activity_horizontal_margin10"-->
+                <!--android:background="@mipmap/button_jianbian"-->
+                <!--android:text="立即登录"-->
+                <!--android:textColor="@color/colorTitle"-->
+                <!--android:textSize="@dimen/text_size_18sp"-->
+        <!--/>-->
+    <!--</LinearLayout>-->
+</LinearLayout>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="yc.pointer.trip"
+    android:versionCode="1"
+    android:versionName="1.3.4">
+
+    <!-- 文件操作 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 文件内容写入，写出 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- INSTALL_FAILED_NO_MATCHING_ABIS -->
+    <uses-permission android:name="android.permission.INSTALL_FAILED_NO_MATCHING_ABIS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- //相机 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Android8.0未知来源应用安装权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 开启闪光灯权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="MANAGE_LOCATION_POLICY" />
+    <!-- 写设置权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.autofocus" />
+
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:supportsRtl="true"
+        android:theme="@style/status_bar_theme">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:enabled="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name=".SplashliasActivity"
+            android:enabled="false"
+            android:icon="@mipmap/ic_launcher_change"
+            android:label="@string/app_name"
+            android:targetActivity=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <!-- 第三方数据库相关 -->
+        <meta-data
+            android:name="DATABASE"
+            android:value="sugar_example.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="yc.pointer.trip.bean" />
+
+        <!-- 高德地图 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="51dea865fac5db9e71c12e8375cd9ebc" />
+
+        <!-- 适配刘海，设置false时全屏有黑色条，true时全屏没有黑色条 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" />
+        <!-- 极光推送 -->
+        <service android:name="cn.jpush.android.service.PushService" />
+        <!-- User defined. 用户自定义的广播接收器 -->
+        <receiver
+            android:name=".receiver.MyJPushBroadcastReceiver"
+            android:enabled="true">
+            <intent-filter>
+
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+
+                <category android:name="yc.pointer.trip" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 首页 -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/status_bar_theme" />
+        <!-- 服务器端更新app服务 -->
+        <service android:name=".receiver.DownloadService" />
+
+        <!-- 注册 -->
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 看游记 -->
+        <activity
+            android:name=".activity.ReadingTravelsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 登录 -->
+        <activity
+            android:name=".activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 写路书 -->
+        <!-- 搜索 -->
+        <activity
+            android:name=".activity.SearchActivity"
+            android:screenOrientation="portrait" />
+        <!-- 美食 -->
+        <!-- 收藏 -->
+        <activity
+            android:name=".activity.CollectionActivity"
+            android:screenOrientation="portrait" />
+        <!-- 预览订单 -->
+        <activity
+            android:name=".activity.OrderPreviewActivity"
+            android:screenOrientation="portrait" />
+        <!-- 发单之后的界面 -->
+        <activity
+            android:name=".activity.BillActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <!-- 城市 -->
+        <activity
+            android:name=".activity.CityActivity"
+            android:screenOrientation="portrait" />
+        <!-- 服务协议 -->
+        <activity
+            android:name=".activity.AgreementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RetrievePasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.PayOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ScenicActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".activity.UnpaidActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ContinuePlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.OrderDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GrabOrderActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 录制 -->
+        <activity
+            android:name=".activity.RecordVideoActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <!-- <activity -->
+        <!-- android:name=".activity.WrateVideoActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:launchMode="singleTask"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+
+        <!-- 新建路书图片浏览器 -->
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.CouponActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyTravelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PersonMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.ScenicDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!-- 友盟 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58abee89c62dca5a9c000b30" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <!-- 微信 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/wxPay" />
+        <!-- QQ -->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1105894263" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault" />
+        <!-- 新浪 -->
+        <activity
+            android:name=".WBShareActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.socialize.media.WBShareCallBackActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.share.WbShareTransActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.BootPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VerifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecomposeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyReserveActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ComplainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AdvertisingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UseCouponAvtivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ThemeActionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DetialLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.VideoDetailsActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WrateVideoActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 活动页面 -->
+        <activity
+            android:name=".activity.ActivityTrip"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.RecentTopicActivity"
+            android:screenOrientation="portrait" />
+        <!-- 个人主页 -->
+        <!-- <activity -->
+        <!-- android:name=".activity.PersonalPageActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+
+        <activity
+            android:name=".activity.BindingPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangeBindingPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangeFirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChangeSecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MyMoneyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WithdrawalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ExplainWebActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WithdrawalBankActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- <activity -->
+        <!-- android:name=".activity.UnDepositActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".activity.DepositedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ClipVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.UploadLoactionVideoActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.MyOrderNewActivity" />
+        <activity
+            android:name=".activity.NewPersonalHomePageActivity"
+            android:launchMode="standard" />
+        <activity android:name=".activity.FollowActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.FansActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.IncomeDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.SystemMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".activity.ScanQRCodeActivity" />
+        <activity android:name=".activity.NewOrderPreviewActivity" />
+        <activity android:name=".activity.NewOrderDetailActivity" />
+        <activity android:name=".activity.NewUnDepositActivity" />
+        <activity android:name=".activity.MemberUpgradeActivity" />
+        <activity android:name=".activity.NewDepositedActivity" />
+        <activity
+            android:name=".activity.MakeMoneyActivity"
+            android:label="@string/title_activity_make_money"
+            android:theme="@style/status_bar_theme"></activity>
+        <activity android:name=".activity.LinkTaskActivity" />
+        <activity
+            android:name=".activity.ShareWebActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.AllTaskActivity" />
+        <activity android:name=".activity.RuleTextWebActivity" />
+        <activity android:name=".activity.InvitionTaskActivity" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/wrate_video"
+    android:orientation="vertical">
+
+    <include layout="@layout/comment_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+        android:layout_marginRight="@dimen/activity_horizontal_margin10"
+        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+        android:background="@mipmap/withcash_back"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin15"
+            android:paddingRight="@dimen/activity_horizontal_margin15">
+
+
+            <TextView
+                android:id="@+id/this_cash"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/rmb_t"
+                android:paddingLeft="@dimen/activity_horizontal_margin15"
+                android:paddingRight="@dimen/activity_horizontal_margin10"
+                android:text="0.00"
+                android:gravity="center"
+                android:textColor="@color/video_details_button"
+                android:textSize="@dimen/text_size_40sp"
+
+
+                />
+
+            <ImageView
+                android:layout_width="@dimen/activity_horizontal_margin2"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                android:background="@color/line" />
+            />
+
+            <TextView
+                android:id="@+id/remain_cash"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/rmb_y"
+                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                android:text="0.00"
+                android:gravity="center"
+                android:textColor="@color/video_text"
+                android:textSize="@dimen/text_size_40sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin15"
+            android:paddingRight="@dimen/activity_horizontal_margin15">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="@dimen/activity_horizontal_margin15"
+                android:paddingRight="@dimen/activity_horizontal_margin10"
+                android:text="本次提现"
+                android:textColor="@color/video_details_button"
+                android:textSize="@dimen/text_size_18sp"
+
+                />
+
+
+            />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="剩余金额"
+                android:textColor="@color/video_text"
+                android:textSize="@dimen/text_size_18sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:layout_marginTop="@dimen/activity_horizontal_margin3"
+        android:text="@string/withdrawal_money"
+        android:textColor="@color/video_text"
+        android:textSize="@dimen/text_size_18sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:layout_marginRight="@dimen/activity_horizontal_margin30"
+        android:text="@string/max_withdrawal"
+        android:textColor="@color/video_text"
+        android:textSize="@dimen/text_size_18sp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_withdrawal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin10"
+        android:paddingRight="@dimen/activity_horizontal_margin10">
+    </android.support.v7.widget.RecyclerView>
+    <include layout="@layout/empty"/>
+
+
+</LinearLayout>

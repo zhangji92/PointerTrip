@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<solid android:color="@color/status_bar"/>-->
+
+    <!--<corners android:radius="40dp" />-->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                    android:angle="0"
+                    android:startColor="#5a9fff"
+                    android:endColor="#0fdaff"
+            />
+            <corners android:radius="40dp" />
+        </shape>
+    </item>
+</selector>

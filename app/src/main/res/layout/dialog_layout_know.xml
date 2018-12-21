@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/line_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/dialog"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+            android:layout_marginRight="@dimen/activity_horizontal_margin15"
+            android:layout_marginTop="@dimen/activity_horizontal_margin15"
+            android:text=""
+            android:textColor="#0ed3f7"
+            android:textSize="@dimen/text_size_20sp"
+            android:gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/dialog_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+            android:layout_marginRight="@dimen/activity_horizontal_margin15"
+            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+            android:maxLines="3"
+            android:text=""
+            android:textColor="#0ed3f7"
+            android:textSize="@dimen/text_size_18sp"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/dialog_sure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_dialog"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-30dp"
+        android:background="@mipmap/dialog_know"
+        android:gravity="center"
+        android:textColor="#0ed3f7"
+        android:textSize="16sp" />
+</RelativeLayout>

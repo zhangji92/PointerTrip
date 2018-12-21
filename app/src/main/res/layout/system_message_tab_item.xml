@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    >
+
+    <TextView
+        android:id="@+id/tab_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="125"
+        android:textColor="@color/history_search"
+        android:textSize="@dimen/text_size_18sp"
+        android:typeface="sans" />
+
+    <ImageView
+        android:id="@+id/red_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tab_item_title"
+        android:src="@mipmap/action" />
+
+
+</RelativeLayout>

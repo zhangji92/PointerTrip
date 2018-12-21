@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin20"
+    android:paddingLeft="@dimen/activity_horizontal_margin8"
+    android:paddingTop="@dimen/activity_horizontal_margin20">
+
+    <ImageView
+        android:id="@+id/hot_scenic_pic"
+        android:layout_width="@dimen/activity_horizontal_margin110"
+        android:layout_height="@dimen/activity_horizontal_margin75"
+        android:contentDescription="@string/logo"
+        android:scaleType="fitXY"
+        android:src="@mipmap/no_photo" />
+
+    <TextView
+        android:id="@+id/hot_scenic_title"
+        android:layout_width="@dimen/activity_horizontal_margin100"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/mine_item"
+        android:textSize="@dimen/text_size_16sp"
+        android:textStyle="bold"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/hot_scenic_oreder_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin5"
+        android:text="@string/hot_scenic_oreder_num"
+        android:textColor="@color/mine_item"
+        android:textSize="@dimen/text_size_14sp"
+        android:textStyle="normal"
+        android:typeface="sans"
+        android:visibility="gone" />
+</LinearLayout>

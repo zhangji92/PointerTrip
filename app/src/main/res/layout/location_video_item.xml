@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/activity_horizontal_margin100"
+    android:layout_height="@dimen/activity_horizontal_margin100">
+
+    <ImageView
+        android:id="@+id/video_thumbPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/no_photo"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/text_duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:gravity="right"
+        android:padding="@dimen/activity_horizontal_margin10"
+        android:textColor="@color/colorTitle"
+        android:background="@mipmap/home_shadow"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

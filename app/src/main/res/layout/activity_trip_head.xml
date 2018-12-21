@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_trip_head_auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.youth.banner.Banner
+        android:background="@color/colorTitle"
+        android:id="@+id/activity_trip_head"
+        image_scale_type="fit_xy"
+        indicator_margin="50dp"
+        title_height="@dimen/text_size_20sp"
+        title_textsize="@dimen/text_size_18sp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin200"
+        app:indicator_height="10dp"
+        app:indicator_width="10dp"
+        app:title_textcolor="@color/colorTitle" />
+</LinearLayout>

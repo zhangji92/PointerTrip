@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@mipmap/img_three_hundred_ninety_nine_blue_z"/>
+    <item android:drawable="@mipmap/img_three_hundred_ninety_nine_white_z"/>
+</selector>

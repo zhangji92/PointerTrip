@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/activity_horizontal_margin5"
+    android:id="@+id/horizontal_card"
+    android:background="@color/colorTitle"
+    app:cardBackgroundColor="@color/shadow"
+    android:layout_width="wrap_content"
+    android:layout_marginRight="@dimen/activity_horizontal_margin15"
+    android:layout_marginBottom="2dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/horizontal_img"
+            android:scaleType="fitXY"
+            android:layout_width="@dimen/activity_horizontal_margin135"
+            android:layout_marginTop="@dimen/activity_horizontal_margin2"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_height="@dimen/activity_horizontal_margin130"
+            android:contentDescription="@string/logo"/>
+
+        <yc.pointer.trip.view.MarqueeTextView
+            android:layout_marginTop="@dimen/activity_horizontal_margin8"
+            android:id="@+id/horizontal_title"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="@dimen/activity_horizontal_margin95"
+            android:layout_height="wrap_content"
+            android:text="黄果树瀑布"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:textSize="@dimen/activity_text_size18"
+            android:textColor="@color/text"/>
+
+        <yc.pointer.trip.view.MarqueeTextView
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin8"
+            android:id="@+id/horizontal_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="疯人也有风情调"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:textSize="@dimen/activity_text_size16"/>
+        <TextView
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+            android:id="@+id/horizontal_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="指针旅游出品"
+            android:textSize="@dimen/activity_text_size16"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginLeft="11dp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin8"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin5"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:id="@+id/horizontal_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3695"
+                android:textColor="@color/horizontal_text"
+                android:textSize="@dimen/activity_text_size20"/>
+            <TextView
+                android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预约"
+                android:textColor="@color/text"
+                android:textSize="@dimen/activity_text_size20"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

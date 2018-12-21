@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/horizontal_card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:layout_marginRight="@dimen/activity_horizontal_margin15"
+    android:background="@drawable/home_horizontal_bg"
+    android:elevation="@dimen/activity_horizontal_margin5"
+    app:cardBackgroundColor="@color/shadow">
+
+    <LinearLayout
+        android:layout_width="@dimen/activity_horizontal_margin270"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin1"
+        android:paddingRight="@dimen/activity_horizontal_margin1">
+
+            <ImageView
+                android:id="@+id/horizontal_img"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/activity_horizontal_margin160"
+                android:scaleType="centerCrop"
+                />
+
+        <yc.pointer.trip.view.MarqueeTextView
+            android:id="@+id/horizontal_title"
+            android:layout_width="@dimen/activity_horizontal_margin200"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+            android:layout_marginTop="@dimen/activity_horizontal_margin8"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="left"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <TextView
+            android:id="@+id/horizontal_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+            android:layout_marginRight="@dimen/activity_horizontal_margin5"
+            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="1"
+            android:text=""
+            android:textSize="@dimen/text_size_16sp" />
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

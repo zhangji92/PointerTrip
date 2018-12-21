@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/colorTitle"
+    android:padding="@dimen/activity_horizontal_margin10">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/background_incomedetails"
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+            >
+           <LinearLayout
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:gravity="center_vertical"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                   android:text="累计收益"
+                   android:gravity="center"
+                   android:textSize="@dimen/text_size_16sp"
+                   android:textColor="@color/mine_nick_text"/>
+               <TextView
+                   android:id="@+id/total_income"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="200"
+                   android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                   android:gravity="center"
+                   android:textColor="@color/mine_nick_text"
+                   android:textSize="@dimen/text_size_20sp"
+                   android:layout_marginBottom="@dimen/activity_horizontal_margin10"/>
+
+           </LinearLayout>
+            <ImageView
+                android:layout_width="@dimen/activity_horizontal_margin1"
+                android:layout_height="match_parent"
+                android:src="@mipmap/img_xuxian"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                    android:text="剩余金额"
+                    android:gravity="center"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textColor="@color/mine_nick_text"/>
+                <TextView
+                    android:id="@+id/surplus_income"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                    android:gravity="center"
+                    android:textColor="@color/mine_nick_text"
+                    android:textSize="@dimen/text_size_20sp"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin10"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+</LinearLayout>

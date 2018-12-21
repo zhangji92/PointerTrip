@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@drawable/toolbar_bk"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/no_back_toolbar"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/bill_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!--srlAccentColor srlPrimaryColor 将会改变 Header 和 Footer 的主题颜色-->
+        <!--srlEnablePreviewInEditMode 可以开启和关闭预览功能-->
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        <ScrollView
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:background="@color/colorTitle"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <RelativeLayout
+                        android:background="@mipmap/bac_order_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                    <RelativeLayout
+                        android:id="@+id/relative_bill_head"
+                        android:layout_width="@dimen/activity_horizontal_margin90"
+                        android:layout_height="@dimen/activity_horizontal_margin90"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin10">
+
+                        <yc.pointer.trip.view.CustomCircleImage
+                            android:id="@+id/bill_head"
+                            android:layout_width="@dimen/activity_horizontal_margin80"
+                            android:layout_height="@dimen/activity_horizontal_margin80"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/head" />
+
+                        <ImageView
+                            android:id="@+id/verify_result"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin65"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin65"
+                            android:src="@mipmap/icon_vip" />
+                    </RelativeLayout>
+
+                    <TextView
+                            android:id="@+id/bill_nick"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:layout_below="@id/relative_bill_head"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:id="@+id/bill_phone"
+                            android:layout_below="@id/bill_nick"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:textColor="@color/colorTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"/>
+                </RelativeLayout>
+
+                <ImageView
+                        android:id="@+id/bill_call_phone"
+                        android:layout_marginTop="-35dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/bill_dial"/>
+
+                <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <View
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+                            android:layout_width="@dimen/activity_horizontal_margin6"
+                            android:background="@color/order_num"
+                            android:layout_height="@dimen/activity_horizontal_margin20"/>
+
+                    <TextView
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                            android:text="订单编号"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:id="@+id/bill_order_number"
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                >
+                    <View
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+                            android:layout_width="@dimen/activity_horizontal_margin6"
+                            android:background="@color/status_bar"
+                            android:layout_height="@dimen/activity_horizontal_margin20"/>
+
+                    <TextView
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                            android:text="订单状态"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:id="@+id/bill_order_status"
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <View
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+                            android:layout_width="@dimen/activity_horizontal_margin6"
+                            android:background="@color/bill_view_back"
+                            android:layout_height="@dimen/activity_horizontal_margin20"/>
+
+                    <TextView
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                            android:text="出行日期"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:id="@+id/bill_start_date"
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <View
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin16"
+                            android:layout_width="@dimen/activity_horizontal_margin6"
+                            android:background="@color/bill_view_back_surplus"
+                            android:layout_height="@dimen/activity_horizontal_margin20"/>
+
+                    <TextView
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                            android:text="结束时间"
+                            android:textColor="@color/text"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                            android:id="@+id/bill_surplus_time"
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                            android:textColor="@color/horizontal_text"
+                            android:textSize="@dimen/activity_text_size16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <ImageView
+                        android:id="@+id/bill_guide"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin40"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin40"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:src="@mipmap/no_guide"/>
+
+                <ImageView
+                        android:id="@+id/bill_person_head"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin40"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin40"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/bill_header"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"/>
+                <include
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        layout="@layout/order_preview_foot"/>
+            </LinearLayout>
+
+        </ScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

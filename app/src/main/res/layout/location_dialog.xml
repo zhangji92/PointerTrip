@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/location_dialog"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/location_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@mipmap/icon_close" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/activity_horizontal_margin25"
+        android:src="@mipmap/img_positioning_tk" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/activity_horizontal_margin9"
+        android:text="开启定位服务"
+        android:textColor="@color/text"
+        android:textSize="@dimen/activity_text_size18" />
+
+    <TextView
+        android:id="@+id/location_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+        android:layout_marginRight="@dimen/activity_horizontal_margin20"
+        android:layout_marginTop="@dimen/activity_horizontal_margin10"
+        android:textColor="@color/withdrawal_text"
+        android:textSize="@dimen/activity_text_size14" />
+
+    <Button
+        android:id="@+id/location_star"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin20"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+        android:layout_marginRight="@dimen/activity_horizontal_margin10"
+        android:layout_marginTop="@dimen/activity_horizontal_margin14"
+        android:background="@drawable/comment_button"
+        android:text="去开启"
+        android:textColor="@color/colorTitle"
+        android:textSize="@dimen/activity_text_size18" />
+</LinearLayout>

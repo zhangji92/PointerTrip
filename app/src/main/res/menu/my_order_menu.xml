@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/order_all"
+          android:icon="@mipmap/menu"
+          android:title="全部"
+          android:showAsAction="always"/>
+    <item android:id="@+id/order_pending"
+          android:title="待接单"
+          android:showAsAction="ifRoom"/>
+    <item android:id="@+id/order_not_begin"
+          android:title="未开始"
+          android:showAsAction="ifRoom"/>
+      <item android:id="@+id/order_have_hand"
+          android:title="进行中"
+          android:showAsAction="ifRoom"/>
+      <item android:id="@+id/order_end"
+          android:title="已结束"
+          android:showAsAction="ifRoom"/>
+      <item android:id="@+id/order_overdue"
+          android:title="已过期"
+          android:showAsAction="ifRoom"/>
+    <item android:id="@+id/order_cancel"
+          android:title="已取消"
+          android:showAsAction="ifRoom"/>
+    <item android:id="@+id/order_unpaid"
+          android:title="待付款"
+          android:showAsAction="ifRoom"/>
+
+</menu>

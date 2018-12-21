@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <yc.pointer.trip.view.FadingScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="260dp"
+                android:contentDescription="@string/logo"
+                android:scaleType="fitXY"
+                android:src="@mipmap/bg_zhuan_top" />
+
+            <!--头像组布局-->
+            <RelativeLayout
+                android:id="@+id/new_make_head_rl"
+                android:layout_width="@dimen/activity_horizontal_margin80"
+                android:layout_height="@dimen/activity_horizontal_margin80"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_horizontal_margin40">
+
+                <yc.pointer.trip.view.CustomCircleImage
+                    android:id="@+id/new_make_head"
+                    android:layout_width="@dimen/activity_horizontal_margin67"
+                    android:layout_height="@dimen/activity_horizontal_margin67"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/head" />
+
+                <ImageView
+                    android:id="@+id/new_make_vip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin55"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin55"
+                    android:contentDescription="@string/logo"
+                    android:src="@mipmap/icon_vip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/new_make_head_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_make_head_rl">
+
+                <Button
+                    android:id="@+id/new_make_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/activity_horizontal_margin40"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                    android:background="@drawable/comment_white_button"
+                    android:paddingLeft="@dimen/activity_horizontal_margin15"
+                    android:paddingRight="@dimen/activity_horizontal_margin15"
+                    android:text="注册/登录"
+                    android:textColor="@color/new_my_money_button"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/new_make_nick_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <!--昵称组布局-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:id="@+id/new_make_nick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLength="8"
+                            android:maxLines="1"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="@dimen/text_size_16sp" />
+
+                        <TextView
+                            android:id="@+id/new_make_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin5"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                            android:background="@drawable/mine_location"
+                            android:paddingBottom="@dimen/activity_horizontal_margin1"
+                            android:paddingLeft="@dimen/activity_horizontal_margin8"
+                            android:paddingRight="@dimen/activity_horizontal_margin8"
+                            android:paddingTop="@dimen/activity_horizontal_margin1"
+                            android:textColor="@color/colorTitle" />
+                    </LinearLayout>
+                    <!--个性签名布局-->
+                    <TextView
+                        android:id="@+id/new_make_introduce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="@dimen/activity_horizontal_margin2"
+                        android:maxLength="22"
+                        android:maxLines="1"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_14sp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/new_make_progress_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_make_head_group"
+                android:layout_marginTop="@dimen/activity_horizontal_margin5">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/logo"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_zhuan_earnings" />
+
+                <TextView
+                    android:id="@+id/new_make_money"
+                    android:layout_width="@dimen/activity_horizontal_margin70"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin24"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin110"
+                    android:gravity="center"
+                    android:textColor="@color/new_my_money_button"
+                    android:textSize="@dimen/text_size_16sp" />
+                <!--进度条一组-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin18"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin107"
+                    android:layout_toRightOf="@id/new_make_money"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/new_make_progress_start"
+                        android:layout_width="@dimen/activity_horizontal_margin40"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-7dp"
+                        android:background="@drawable/new_make_text_back"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/activity_horizontal_margin2"
+                        android:paddingLeft="@dimen/activity_horizontal_margin5"
+                        android:paddingRight="@dimen/activity_horizontal_margin5"
+                        android:paddingTop="@dimen/activity_horizontal_margin2"
+                        android:text="0"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <yc.pointer.trip.view.CustomProgress
+                        android:id="@+id/new_make_progress"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:progress="100"
+                        app:ProgressReachColor="@color/customize_progress_text"
+                        app:ProgressText="0.11"
+                        app:ProgressTextColor="@color/customize_progress_text"
+                        app:ProgressTextSize="@dimen/text_size_14sp"
+                        app:ProgressUnReachColor="#ffffff" />
+
+                    <TextView
+                        android:id="@+id/new_make_progress_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                        android:layout_marginTop="-7dp"
+                        android:background="@drawable/new_make_text_back"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/activity_horizontal_margin2"
+                        android:paddingLeft="@dimen/activity_horizontal_margin5"
+                        android:paddingRight="@dimen/activity_horizontal_margin5"
+                        android:paddingTop="@dimen/activity_horizontal_margin2"
+                        android:text="1.21w"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_16sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/new_make_income"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin24"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin150"
+                    android:text="总计收益"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <TextView
+                    android:id="@+id/new_make_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin153"
+                    android:layout_toRightOf="@id/new_make_income"
+                    android:gravity="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_size_13sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/new_make_task_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_make_progress_rl"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/new_make_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/logo"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_zhuan_task" />
+
+                    <TextView
+                        android:id="@+id/new_make_task_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin14"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                        android:paddingBottom="@dimen/activity_horizontal_margin20"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/text_size_11sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/new_make_invite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/logo"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_zhuan_inva" />
+
+                    <TextView
+                        android:id="@+id/new_make_invite_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin14"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                        android:paddingBottom="@dimen/activity_horizontal_margin20"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/text_size_11sp" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/new_make_task_ll"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/new_make_video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/logo"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_zhuan_video" />
+
+                    <TextView
+                        android:id="@+id/new_make_video_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin14"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                        android:paddingBottom="@dimen/activity_horizontal_margin20"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/text_size_11sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/new_make_local"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/logo"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_zhuan_local" />
+
+                    <TextView
+                        android:id="@+id/new_make_local_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin14"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                        android:paddingBottom="@dimen/activity_horizontal_margin20"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/text_size_11sp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </yc.pointer.trip.view.FadingScrollView>
+    <!--导航条-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:color/transparent"
+      >
+
+
+        <View
+            android:id="@+id/nac_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTitle"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/tool_bar_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@mipmap/img_greyshades_top"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/navigate_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="赚一赚"
+            android:textStyle="normal"
+            android:textSize="@dimen/text_size_18sp"
+            android:textColor="@color/withdrawal_text"/>
+    </RelativeLayout>
+
+</RelativeLayout>

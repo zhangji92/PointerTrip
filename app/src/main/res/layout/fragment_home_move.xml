@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_move_smart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTitle">
+
+
+    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTitle" />
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@id/home_header_pager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin180"
+            android:scaleType="fitXY"
+            app:layout_behavior="yc.pointer.trip.behavior.HomeHeaderPagerBehavior" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin7"
+            android:background="@drawable/home_item_back"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_horizontal_margin26"
+            app:layout_behavior="yc.pointer.trip.behavior.HomeNavigateBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin15"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/home_header_book"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin9"
+                    android:drawableTop="@mipmap/icon_earnings_s"
+                    android:gravity="center"
+                    android:text="扫一扫"
+                    android:textColor="@color/foot_header_item_text"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/home_header_look"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin9"
+                    android:drawableTop="@mipmap/icon_talent_s"
+                    android:gravity="center"
+                    android:text="旅赚训练营"
+                    android:textColor="@color/foot_header_item_text"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/home_header_record"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin9"
+                    android:drawableTop="@mipmap/icon_subscribe_s"
+                    android:gravity="center"
+                    android:text="@string/point_verify"
+                    android:textColor="@color/foot_header_item_text"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:id="@+id/home_header_mybook"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin10"
+                    android:drawableTop="@mipmap/icon_invite_code"
+                    android:gravity="center"
+                    android:text="邀请码"
+                    android:textColor="@color/foot_header_item_text"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:typeface="sans" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--搜索框-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin45"
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+            android:background="@color/colorTitle"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_behavior="yc.pointer.trip.behavior.HomeTitleBehavior">
+
+            <ImageView
+                android:id="@+id/home_move_logo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/activity_horizontal_margin10"
+                android:src="@mipmap/img_logo_home" />
+
+            <ImageView
+                android:id="@+id/home_move_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:src="@mipmap/img_search_home" />
+        </LinearLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/home_move_tab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin45"
+            android:background="@color/colorTitle"
+            app:layout_behavior="yc.pointer.trip.behavior.HomeTabBehavior"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/colorTitle"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/jingxuan"
+            app:tabTextColor="@color/history_search" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/home_move_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTitle"
+            app:layout_behavior="yc.pointer.trip.behavior.HomeContentBehavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTitle" />
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

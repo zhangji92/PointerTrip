@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/new_money_top_tool"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@id/standard_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:paddingTop="@dimen/activity_horizontal_margin8"
+            app:navigationIcon="@mipmap/back_butten"
+            app:theme="@style/toolbar_theme"
+            tools:ignore="Overdraw">
+
+            <TextView
+                android:id="@id/standard_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_size_18sp"
+                />
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/new_money_top">
+
+                <LinearLayout
+                    android:id="@+id/my_money_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/activity_horizontal_margin10">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/activity_horizontal_margin15"
+                        android:drawableTop="@mipmap/icon_expectedearnings"
+                        android:gravity="center"
+                        android:text="预计提现"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/activity_horizontal_margin15"
+                        android:drawableTop="@mipmap/icon_withdrawaln"
+                        android:gravity="center"
+                        android:text="可提现"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawablePadding="@dimen/activity_horizontal_margin15"
+                        android:drawableTop="@mipmap/icon_havewithdrawal"
+                        android:gravity="top|center"
+                        android:text="已提现"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/my_moeny_tex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_money_top"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin20"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/can_num"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="300"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <TextView
+                        android:id="@+id/can_withdrawal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="160"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <TextView
+                        android:id="@+id/total_num"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="top|center"
+                        android:text="200"
+                        android:textColor="@color/colorTitle"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/activity_horizontal_margin10"
+                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                android:paddingTop="@dimen/activity_horizontal_margin10"
+                android:text="全部收益"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/my_money_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin95"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/video_money"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin5"
+                    android:drawableTop="@mipmap/icon_videoreturns8"
+                    android:gravity="top|center"
+                    android:text="视频收益"
+                    android:textSize="@dimen/text_size_14sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/my_money_line" />
+
+                <TextView
+                    android:id="@+id/broadcast_money"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin5"
+                    android:drawableTop="@mipmap/icon_broadcastrevenue"
+                    android:gravity="top|center"
+                    android:text="播放收益"
+                    android:textSize="@dimen/text_size_14sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/my_money_line" />
+
+                <TextView
+                    android:id="@+id/thumbupear_money"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin5"
+                    android:drawableTop="@mipmap/icon_thumbupearnings"
+                    android:gravity="top|center"
+                    android:text="点赞收益"
+                    android:textSize="@dimen/text_size_14sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/my_money_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_horizontal_margin95"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fans_money"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin5"
+                    android:drawableTop="@mipmap/icon_fansearnings"
+                    android:gravity="top|center"
+                    android:text="粉丝收益"
+                    android:textSize="@dimen/text_size_14sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/my_money_line" />
+
+                <TextView
+                    android:id="@+id/order_money"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin5"
+                    android:drawableTop="@mipmap/icon_task_earnings"
+                    android:gravity="top|center"
+                    android:text="任务收益"
+                    android:textSize="@dimen/text_size_14sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/my_money_line" />
+
+                <TextView
+                    android:id="@+id/invitew_money"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/activity_horizontal_margin5"
+                    android:drawableTop="@mipmap/icon_inviteearnings"
+                    android:gravity="top|center"
+                    android:text="邀请收益"
+                    android:textSize="@dimen/text_size_14sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/my_money_line" />
+
+            <TextView
+                android:id="@+id/money_trip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin15"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+                android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                android:layout_marginTop="@dimen/activity_horizontal_margin42"
+                android:background="@mipmap/img_blueframe"
+                android:lineSpacingExtra="@dimen/activity_horizontal_margin5"
+                android:paddingLeft="@dimen/activity_horizontal_margin12"
+                android:paddingRight="@dimen/activity_horizontal_margin10"
+                android:paddingTop="@dimen/activity_horizontal_margin12"
+                android:text=""
+                android:textColor="@color/new_money_text"
+                android:textSize="@dimen/text_size_14sp"
+                android:typeface="sans" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin40"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin43"
+        android:layout_marginRight="@dimen/activity_horizontal_margin43"
+        android:layout_marginTop="@dimen/activity_horizontal_margin30"
+        android:background="@drawable/comment_button"
+        android:gravity="center"
+        android:text="去提现"
+        android:textColor="@color/colorTitle"
+        android:textSize="@dimen/text_size_20sp" />
+</LinearLayout>

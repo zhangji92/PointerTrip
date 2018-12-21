@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/msg_activity_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTitle"
+    android:orientation="vertical">
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/msg_activity_smart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <!--srlAccentColor srlPrimaryColor 将会改变 Header 和 Footer 的主题颜色-->
+        <!--srlEnablePreviewInEditMode 可以开启和关闭预览功能-->
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTitle" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <yc.pointer.trip.view.MyListView
+                android:id="@+id/msg_activity_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"/>
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/msg_activity_list"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:scrollbars="none">-->
+
+            <!--</android.support.v7.widget.RecyclerView>-->
+
+            <include layout="@layout/empty" />
+        </LinearLayout>
+
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTitle" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/msg_activity_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin40"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.5"
+            android:background="@color/foot_header_item_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/activity_horizontal_margin5">
+
+            <EditText
+                android:id="@+id/msg_activity_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                android:layout_weight="1"
+                android:alpha="0.8"
+                android:background="@drawable/video_comment_edit"
+                android:hint="写评论(最多150字)"
+                android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+                android:maxLines="2"
+                android:paddingBottom="@dimen/activity_horizontal_margin2"
+                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                android:paddingRight="@dimen/activity_horizontal_margin5"
+                android:textColor="@color/text"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <Button
+                android:id="@+id/msg_activity_commit"
+                android:layout_width="@dimen/activity_horizontal_margin55"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/activity_horizontal_margin5"
+                android:background="@drawable/pay_again"
+                android:text="发送"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_size_18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

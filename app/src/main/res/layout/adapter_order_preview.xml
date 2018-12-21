@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+            android:layout_width="@dimen/activity_horizontal_margin40"
+            android:layout_height="match_parent">
+
+        <TextView
+                android:id="@+id/tv_top_line"
+                android:layout_width="1dp"
+                android:layout_height="@dimen/activity_horizontal_margin16"
+                android:layout_centerHorizontal="true"
+                android:background="@color/status_bar" />
+
+        <ImageView
+                android:id="@+id/tv_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/preview_spot" />
+        <TextView
+                android:id="@+id/tv_bottom_line"
+                android:layout_marginTop="-10dp"
+                android:layout_below="@id/tv_dot"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@color/status_bar" />
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/rlCenter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_horizontal_margin6"
+            android:paddingRight="@dimen/activity_horizontal_margin10">
+
+        <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="景点"
+                android:textColor="#999"
+                android:textSize="@dimen/activity_text_size18" />
+
+        <TextView
+                android:id="@+id/tv_pic"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/order_text_pic"
+                android:textSize="@dimen/activity_text_size18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <TextView
+                android:id="@+id/tv_scenic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_title"
+                android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                android:text="迪士尼乐园  外滩  城隍庙"
+                android:textColor="#999"
+                android:textSize="@dimen/activity_text_size16" />
+    </RelativeLayout>
+
+</LinearLayout>

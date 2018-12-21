@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mybookBack"
+    android:orientation="vertical">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/home_share_wechat"
+                android:layout_width="@dimen/activity_horizontal_margin90"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/activity_horizontal_margin10"
+                android:drawableTop="@mipmap/wechat"
+                android:gravity="center"
+                android:text="微信"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/home_share_wxcircle"
+                android:layout_width="@dimen/activity_horizontal_margin90"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/activity_horizontal_margin10"
+                android:drawableTop="@mipmap/wxcircle"
+                android:gravity="center"
+                android:text="朋友圈"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/home_share_qq"
+                android:layout_width="@dimen/activity_horizontal_margin90"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/activity_horizontal_margin10"
+                android:drawableTop="@mipmap/qq"
+                android:gravity="center"
+                android:text="QQ"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/home_share_qzone"
+                android:layout_width="@dimen/activity_horizontal_margin90"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/activity_horizontal_margin10"
+                android:drawableTop="@mipmap/qzone"
+                android:gravity="center"
+                android:text="空间"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/home_share_sina"
+                android:layout_width="@dimen/activity_horizontal_margin90"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/activity_horizontal_margin10"
+                android:drawableTop="@mipmap/sina"
+                android:gravity="center"
+                android:text="新浪"
+                android:textColor="@color/text" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin20"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/home_share_collect"
+                android:layout_width="@dimen/activity_horizontal_margin90"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/activity_horizontal_margin10"
+                android:drawableTop="@mipmap/icon_collect_s_s"
+                android:gravity="center"
+                android:text="收藏:125"
+                android:textColor="@color/text" />
+
+            <TextView
+                android:id="@+id/home_share_reserve"
+                android:layout_width="@dimen/activity_horizontal_margin90"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/activity_horizontal_margin10"
+                android:drawableTop="@mipmap/icon_appointment_sh"
+                android:gravity="center"
+                android:text="预约:"
+                android:textColor="@color/text" />
+
+
+            <TextView
+                android:id="@+id/home_share_forwarding"
+                android:layout_width="@dimen/activity_horizontal_margin90"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/activity_horizontal_margin10"
+                android:drawableTop="@mipmap/icon_forwarding_sh"
+                android:gravity="center"
+                android:text="转发:"
+                android:textColor="@color/text" />
+
+            <!--<TextView-->
+                <!--android:id="@+id/home_share_favor"-->
+                <!--android:layout_width="@dimen/activity_horizontal_margin90"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:drawablePadding="@dimen/activity_horizontal_margin10"-->
+                <!--android:drawableTop="@mipmap/icon_praise_sh"-->
+                <!--android:gravity="center"-->
+                <!--android:text="点赞:"-->
+                <!--android:textColor="@color/text" />-->
+
+            <TextView
+                android:id="@+id/home_share_report"
+                android:layout_width="@dimen/activity_horizontal_margin90"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/activity_horizontal_margin10"
+                android:drawableTop="@mipmap/icon_report_sh"
+                android:gravity="center"
+                android:text="举报"
+                android:textColor="@color/text" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <TextView
+        android:id="@+id/home_share_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin20"
+        android:layout_marginTop="@dimen/activity_horizontal_margin20"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/text"
+        android:textSize="@dimen/activity_text_size18" />
+
+</LinearLayout>

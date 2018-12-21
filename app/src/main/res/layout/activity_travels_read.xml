@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:background="@color/colorTitle"
+              android:layout_height="match_parent">
+
+    <include
+            android:id="@+id/travels_tool"
+            android:layout_height="wrap_content"
+             android:layout_width="match_parent"
+             layout="@layout/comment_toolbar"/>
+
+
+    <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/travels_tool"
+            layout="@layout/refresh_smart"/>
+
+    <ImageView
+
+            android:id="@+id/travels_read_book"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/creat_book"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin18"
+            android:layout_marginRight="@dimen/activity_horizontal_margin25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+</RelativeLayout>

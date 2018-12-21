@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/activity_horizontal_margin10"
+        android:paddingTop="@dimen/activity_horizontal_margin10"
+        android:text="选择出行日期"
+        android:textColor="@color/text"
+        android:textSize="@dimen/activity_text_size18" />
+
+    <include
+        layout="@layout/layout_date_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pop_person_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+            android:layout_marginRight="@dimen/activity_horizontal_margin20"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:paddingBottom="@dimen/activity_horizontal_margin10"
+            android:paddingTop="@dimen/activity_horizontal_margin10"
+            android:text="取消"
+            android:textColor="@color/text"
+            android:textSize="@dimen/activity_text_size18" />
+
+        <TextView
+            android:id="@+id/pop_person_sure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+            android:layout_marginRight="@dimen/activity_horizontal_margin20"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingBottom="@dimen/activity_horizontal_margin10"
+            android:paddingTop="@dimen/activity_horizontal_margin10"
+            android:text="选择"
+            android:textColor="@color/home_bar"
+            android:textSize="@dimen/activity_text_size18" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/comment_toolbar" />
+
+    <ProgressBar
+        android:id="@+id/share_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin2"
+        android:progressDrawable="@drawable/progress_back" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <WebView
+            android:id="@+id/share_web"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+        <Button
+            android:textSize="@dimen/text_size_16sp"
+            android:id="@+id/share_participate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/travel_btn"
+            android:text="邀请好友助攻集卡"
+            android:textColor="@color/colorTitle" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/share_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/share_wifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/erro_network" />
+
+        <Button
+            android:id="@+id/share_reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/explain_wifi"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:text="重新加载"
+            android:textColor="@color/read_header_text" />
+    </RelativeLayout>
+
+</LinearLayout>

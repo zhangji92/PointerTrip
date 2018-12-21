@@ -1,0 +1,256 @@
+<resources>
+    <string name="app_name">指针自由行</string>
+
+    <item name="tag_position" type="id" />
+    <item name="tag_photo" type="id" />
+
+
+    <string name="logo">logo</string>
+    <string name="sys_exit_tip">再按一次退出</string>
+    <!--注册页面-->
+    <string name="register_title">注册</string>
+    <string name="register_phone">请输入您的手机号</string>
+    <string name="register_psw">请输入密码,至少6位数字或字母</string>
+    <string name="register_psw_again">请确认密码,与上述密码保持一致</string>
+    <string name="register_verify">请输入验证码</string>
+    <string name="register_get_verify">获取验证码</string>
+    <string name="register_agreement">点击注册即同意</string>
+    <string name="agreement_text">《指针旅游注册协议》</string>
+    <!--注册页面-->
+    <string name="binding_title">绑定手机</string>
+    <!--登录页面-->
+    <string name="loggin_title">登录</string>
+    <string name="login_forget">忘记密码</string>
+    <string name="login_register">快速注册</string>
+    <string name="other_login">第三方登录</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="make_monkey_fragment">make monkey fragment</string>
+    <string name="mine_fragment">mine fragment</string>
+    <string name="go_travel_fragment">go travel fragment</string>
+
+    <!--新建路书页面-->
+    <string name="creat_travel">写游记</string>
+    <string name="wrate_video">发布游记</string>
+    <string name="right_text">发布</string>
+    <string name="video_title">标题</string>
+    <string name="edit_title">请输入标题（可输入30个字符）</string>
+    <string name="property">分类</string>
+    <string name="chose_property">请选择</string>
+    <string name="city">城市</string>
+    <string name="scenery">景点</string>
+    <string name="ed_city">请填写</string>
+    <string name="video_location">所在位置</string>
+    <!--新建路书菜单-->
+    <string name="cate">美食</string>
+    <!--路书添加文本-->
+    <string name="write_text">编辑文字....</string>
+    <string name="write_text_title">编辑文字</string>
+    <string name="write_text_commit">完成</string>
+    <!--搜索页面-->
+    <string name="edit_search_hint">请输入关键字</string>
+    <string name="history_search">历史搜索</string>
+    <string name="clear_history_search">清除</string>
+    <string name="hot_search">热门搜索</string>
+    <string name="related_book">相关游记</string>
+
+    <!--出发吧页面-->
+    <string name="commit_order">完成</string>
+    <string name="go_title">出发吧</string>
+    <string name="chose_scenery">请选择景点</string>
+    <string name="chose_scenery_new">景点选择</string>
+    <string name="chose_date">出行日期</string>
+    <string name="chose_people_count">出行人数</string>
+    <string name="ed_people_count">请输入出行人数</string>
+    <string name="chose_welcome">接待方式</string>
+    <string name="requirement">具体要求</string>
+    <string name="guide_card">导游证件</string>
+    <string name="travel_time">计价规则</string>
+    <string name="travel_time_new">出行时长</string>
+    <string name="ed_requirement">请输入您的具体要求（最多要求50字）</string>
+    <string name="notice">注：如勾选则将所选景点价格计入订单总价</string>
+    <string name="unlogin_notice">需登录后才可以发单哦</string>
+    <string name="alread_publish_num">过去一周\n%1$s 人已发单前往这里</string>
+    <string name="city_price">该城市当季导游价格\n%1$s元/小时、%2$s元/天</string>
+    <string name="hot_scenic_oreder_num">已有%1$s人去过</string>
+    <string name="verify_tagtext">指针认证：%1$s</string>
+    <string name="destination">目的地</string>
+    <string name="citys_destination">中国·天津</string>
+    <string name="hot_senic">热门景点</string>
+    <string name="grab_sex">接单方性别</string>
+    <string name="transfer">用车服务</string>
+    <string name="order_create_time">下单时间：%1$s </string>
+
+
+    <string name="rule">注：出发前请仔细阅读《出行须知》</string>
+    <string name="verify_rule">注：提交前请仔细阅读《会员身份认证服务协议》</string>
+    <string name="deposit_rule">注：付款前请仔细阅读《指针增值服务协议》</string>
+
+    <!--看游记界面-->
+    <string name="read_travel_title">看游记</string>
+    <!--美食界面-->
+    <string name="foot_title">美食</string>
+    <string name="new_book">最新游记</string>
+    <string name="all_book">全部游记</string>
+    <!--收藏界面-->
+    <string name="collection_title">收藏</string>
+    <!--支付订单界面-->
+    <string name="pay">付款</string>
+    <string name="pay_title">支付订单</string>
+    <string name="discount">折扣</string>
+    <string name="coupon">指针大礼包</string>
+    <string name="action">疯狂旅游年</string>
+    <string name="setting">设置</string>
+    <string name="pay_stype">请选择支付方式</string>
+    <string name="cancel_order">取消订单</string>
+    <!--order_preview_activity-->
+    <string name="preview_activity">订单预览</string>
+    <string name="preview_scenic">景点</string>
+    <!--未支付订单页面-->
+    <string name="unpaid_title">未支付订单</string>
+    <!--未支付页面-->
+    <string name="paid_failure_title">支付失败</string>
+    <string name="payment_failure_warning">支付失败，请重新支付</string>
+    <string name="payment_failure_message">支付信息</string>
+    <string name="pay_again">重新支付</string>
+    <string name="check_order">查看详情</string>
+    <string name="payment_failure_text">该订单会为您保留24小时（从下单之日算起），24小时后如果还未付款，系统将自动取消该订单。</string>
+    <!--景点页面-->
+    <string name="human">人文</string>
+    <string name="outdoor">户外</string>
+
+    <string name="no_search_result">抱歉,暂时没有找到相关景点信息</string>
+    <!--继续玩页面-->
+    <string name="time">time（h）</string>
+    <string name="total_amount">total amount</string>
+    <string name="continue_conmmint">继续玩</string>
+
+
+    <!--city_activity-->
+    <string name="city_location_city">当前定位城市</string>
+    <string name="city_location_hint">Not yet orientation to the city,place choose</string>
+    <string name="city_lately_city">最近访问城市</string>
+    <string name="city_lately_hint">A recent visit to the city</string>
+    <string name="city_all_city">全部城市</string>
+    <string name="city_all_hint">All the cities</string>
+
+    <string name="agreement">用户服务协议</string>
+    <string name="orderagreement">出行须知</string>
+    <string name="verifyagreement">会员身份认证服务协议</string>
+    <string name="depositagreement">指针增值服务协议</string>
+
+    <string name="retrieve_password">重置密码</string>
+    <!--赚一赚页面-->
+    <string name="make_monkey_title">赚一赚</string>
+    <string name="grab_order_list">抢单列表</string>
+    <string name="grab_order">抢单</string>
+    <string name="unlogin_makemoney">需登录后才可以抢单哦</string>
+    <!--发单状态页面-->
+    <string name="bill_order_title">发单状态</string>
+    <string name="bill_order_title_complaint">投诉</string>
+    <!--抢单状态页面-->
+    <string name="grab_order_title">抢单状态</string>
+    <string name="attention">特别提醒</string>
+    <string name="attention_content">接单酬劳将由七个工作日内入账，如超时未到帐请联系我们。</string>
+    <!--订单详情页面-->
+    <string name="order_detail">订单详情</string>
+    <string name="order_detail_number">订单编号</string>
+    <string name="order_detail_number_new">订单编号：%1$s</string>
+    <string name="order_initiator">发起人</string>
+    <string name="order_date">出行日期</string>
+    <string name="order_traveller_count">出行人数</string>
+    <string name="order_travel_time">出行时间</string>
+    <string name="welcome_station">接站属性</string>
+    <string name="create_order_time">下单时间</string>
+    <string name="need_guide">导游证件</string>
+    <string name="order_totalmoney">订单总价</string>
+    <string name="order_QRcode">扫描二维码开始订单</string>
+    <string name="order_stared">该订单已开始</string>
+    <string name="order_ed">该订单已结束</string>
+    <!--我的页面-->
+    <string name="road_book">游记</string>
+    <string name="mine">我的</string>
+    <string name="person_msg">个人信息</string>
+    <string name="my_foot">我的旅行</string>
+    <string name="my_collet">我的收藏</string>
+    <string name="about_us">关于我们</string>
+    <string name="clear_cache">清理缓存</string>
+    <string name="recompose_pasw">修改密码</string>
+    <string name="bindin_phone">手机绑定</string>
+    <string name="help">帮助与反馈</string>
+    <string name="point_verify">会员信息</string>
+    <!--关于我们页面-->
+    <string name="about_text">指针自由行创新性的提出了“以游养游”这种全新的互联网+旅游的理念，采用全新的当地人模式，为广大自由行爱好者打造一款旅游自创业的交易平台。让用户可以把生活和旅游更好的结合在一起。
+    </string>
+    <string name="about_weixin">微信公众号</string>
+    <string name="about_service">联系客服</string>
+    <string name="about_zzTrip">指针自由行</string>
+    <string name="service_phone">400-688-2959</string>
+    <string name="check_version">当前版本</string>
+    <!--我的优惠券页面-->
+    <string name="my_coupon">指针大礼包</string>
+    <!--我的路书页面-->
+    <string name="my_roadbook">我的游记</string>
+    <!--帮助与反馈页面-->
+    <string name="feedback">意见反馈</string>
+    <string name="instruction">常见问题</string>
+    <!--我的订单页面-->
+    <string name="my_order">我的订单</string>
+    <string name="my_reservation">我的预约</string>
+    <!--我的旅行页面-->
+    <string name="my_travel">我的旅行</string>
+    <string name="travel_times">订单数量</string>
+    <string name="total_money">总金额</string>
+    <!--我的旅行页面-->
+    <string name="person_message">个人信息</string>
+    <!--路书详情-->
+    <string name="book_details_title">游记详情</string>
+    <string name="video_details_reserve">预约</string>
+    <!--景点详情-->
+    <string name="scenic_details_title">景点详情</string>
+    <!--投诉页面-->
+    <string name="complain">投诉</string>
+    <string name="call_customer">拨打客服电话投诉</string>
+    <string name="choose_tag">选择投诉原因</string>
+    <string name="action_detial">活动详情</string>
+    <string name="activity_trip">主题活动</string>
+    <!--解绑界面-->
+    <string name="binding_number">当前用户绑定手机号码：</string>
+    <string name="change_number">验证</string>
+    <string name="activity_fans">粉丝</string>
+    <string name="activity_follow">关注</string>
+
+    <string name="binding_introduce">  该手机号可直接用于APP登录,平且方便接收订单等相关信息</string>
+    <!--更换界面-->
+    <string name="rename_phone">更换</string>
+    <!--退押金界面-->
+    <string name="deposited">会员权益</string>
+    <!--交押金界面-->
+    <string name="undeposit">充值会员</string>
+    <!--已绑定界面-->
+    <string name="binding">绑定手机号</string>
+    <!--红包提现界面-->
+    <string name="withdrawal_title">我的收益</string>
+    <string name="focus_me">关注微信公众号，领取现金红包</string>
+    <string name="focus_me_introduce">截图后请用微信扫一扫关注我们</string>
+    <string name="public_wechat">公众号：指针自由行APP</string>
+    <string name="withdrawal_money">当前提现金额低于5元不可提现</string>
+    <string name="max_withdrawal">每日提现上限金额为50元</string>
+    <string name="clip_video_title">裁剪视频</string>
+    <string name="note_verify">指针自由行提示您：开启 %1$s 需要先进行指针会员身份升级，请您先去完善会员实名认证信息</string>
+    <string name="note_deposit">指针自由行提示您：认证成为指针会员，享受更多权益，获取更多收益</string>
+    <string name="new_note_deposit">· 指针自由行提示您：认证成为指针会员，享受更多权益，获取更多收益</string>
+    <string name="zan_num"> %1$s 赞 </string>
+    <string name="comments_num"> 评论 %1$s</string>
+    <string name="locate_video"> 本地视频</string>
+    <string name="next"> 下一步</string>
+    <string name="msg_list">消息列表</string>
+    <string name="verfiy_checking_explan"> 审核需要1-3个工作日，请您耐心等待</string>
+    <string name="verfiy_unpass_explan"> 您上传的照片显示不清晰，不完整，请重新上传</string>
+    <string name="verfiy_pass_explan"> 您可享受赚一赚接单、发单及更多收益等各项会员特权</string>
+    <string name="member">399权益</string>
+    <string name="title_activity_make_money">MakeMoneyActivity</string>
+    <string name="all_task_introduction">奖励规则</string>
+
+
+</resources>

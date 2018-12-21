@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/invitation_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/icon_close" />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/invitation_close"
+        android:layout_marginTop="@dimen/activity_horizontal_margin7"
+        android:background="@mipmap/background_invitation_s">
+
+
+
+        <RelativeLayout
+            android:id="@+id/relative_invition_head"
+            android:layout_width="@dimen/activity_horizontal_margin50"
+            android:layout_height="@dimen/activity_horizontal_margin50"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_horizontal_margin14">
+
+            <yc.pointer.trip.view.CustomCircleImage
+                android:id="@+id/invitation_head"
+                android:layout_width="@dimen/activity_horizontal_margin45"
+                android:layout_height="@dimen/activity_horizontal_margin45"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/head" />
+
+            <ImageView
+                android:id="@+id/verify_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin32"
+                android:layout_marginTop="@dimen/activity_horizontal_margin35"
+                android:src="@mipmap/icon_vip" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/invitation_who_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/relative_invition_head"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+            android:text=""
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <EditText
+            android:id="@+id/invitation_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin45"
+            android:layout_below="@id/invitation_who_code"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+            android:layout_marginRight="@dimen/activity_horizontal_margin20"
+            android:layout_marginTop="@dimen/activity_horizontal_margin36"
+            android:background="@drawable/home_horizontal_liner_bg"
+            android:gravity="center"
+            android:hint="请输入邀请码"
+            android:inputType="number"
+            android:textColor="@color/text"
+            android:textColorHint="@color/invitation_dialog_not" />
+
+        <TextView
+            android:id="@+id/invitation_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/invitation_code"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+            android:text="注:每个用户只能填写一次邀请码"
+            android:textColor="@color/invitation_dialog_not" />
+
+
+        <Button
+
+            android:id="@+id/invitation_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/invitation_note"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin20"
+            android:layout_marginRight="@dimen/activity_horizontal_margin20"
+            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+            android:background="@drawable/comment_button"
+            android:text="确定"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/text_size_16sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

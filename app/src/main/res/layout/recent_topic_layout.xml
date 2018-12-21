@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/comment_toolbar"></include>
+    <ProgressBar
+        android:progressDrawable="@drawable/progress_back"
+        android:id="@+id/theme_action_pro"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin2"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"/>
+    <WebView
+        android:id="@+id/recent_topic_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/theme_relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/book_details_wifi"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/erro_network"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/book_details_reload"
+            android:layout_below="@id/book_details_wifi"
+            android:layout_centerInParent="true"
+            android:text="重新加载"
+            android:textColor="@color/read_header_text"
+            android:background="@null"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

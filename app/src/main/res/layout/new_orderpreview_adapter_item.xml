@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="@dimen/activity_horizontal_margin20">
+
+    <TextView
+        android:id="@+id/order_preview_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="景点名称"
+        android:textColor="@color/back_normal"
+        android:textSize="@dimen/text_size_16sp"
+        android:textStyle="normal"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/order_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+        android:lineSpacingExtra="@dimen/activity_horizontal_margin3"
+        android:text=""
+
+        android:ellipsize="end"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/text_size_16sp"
+        android:textStyle="normal"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+        android:lineSpacingExtra="@dimen/activity_horizontal_margin3"
+        android:text=""
+        android:textColor="@color/new_my_money_button"
+        android:textSize="@dimen/text_size_16sp"
+        android:textStyle="normal"
+        android:typeface="sans"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/screen_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <LinearLayout
+        android:id="@+id/screen_linear"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/screen_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin12"
+            android:contentDescription="@string/logo"
+            android:src="@mipmap/icon_seach_sy" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/screen_choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="精选"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_size_20sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/activity_horizontal_margin20"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin12"
+                android:layout_marginRight="@dimen/activity_horizontal_margin12"
+                android:background="@color/home_view" />
+
+            <TextView
+                android:id="@+id/screen_attention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="关注"
+                android:textColor="@color/history_search"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="@dimen/activity_horizontal_margin20"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin12"
+                android:layout_marginRight="@dimen/activity_horizontal_margin12"
+                android:background="@color/home_view" />
+
+            <TextView
+                android:id="@+id/screen_travel_earn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="旅赚训练营"
+                android:textColor="@color/history_search"
+                android:textSize="@dimen/text_size_16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/screen_scanIt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity_horizontal_margin12"
+            android:contentDescription="@string/logo"
+            android:src="@mipmap/icon_scan_sy" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/screen_up"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_horizontal_margin40"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorTitle">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/activity_horizontal_margin1"
+            android:background="@color/wrate_video" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/activity_horizontal_margin5">
+            <EditText
+                android:id="@+id/screen_edit"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin5"
+                android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                android:layout_weight="1"
+                android:alpha="0.8"
+                android:background="@drawable/video_comment_edit"
+                android:gravity="center|left"
+                android:hint="写评论(最多150字)"
+                android:maxLines="2"
+                android:paddingBottom="@dimen/activity_horizontal_margin2"
+                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                android:paddingRight="@dimen/activity_horizontal_margin5"
+                android:textCursorDrawable="@drawable/edittext_cursor_drawable"
+                android:textSize="@dimen/text_size_16sp" />
+            <Button
+                android:id="@+id/screen_publish"
+                android:layout_width="@dimen/activity_horizontal_margin55"
+                android:layout_height="@dimen/activity_horizontal_margin35"
+                android:layout_marginRight="@dimen/activity_horizontal_margin5"
+                android:background="@drawable/pay_again"
+                android:text="发送"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_size_18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

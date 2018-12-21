@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/wrate_video"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin7"
+        android:background="@color/colorTitle"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/liner_good_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+            android:layout_marginRight="@dimen/activity_horizontal_margin12"
+            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/activity_horizontal_margin12"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/good_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_good_back"
+                android:gravity="center"
+                android:paddingLeft="@dimen/activity_horizontal_margin5"
+                android:paddingRight="@dimen/activity_horizontal_margin5"
+                android:text="精选"
+                android:textColor="@color/colorTitle"
+                android:textSize="@dimen/text_size_20sp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+            <TextView
+                android:id="@+id/more_good"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="更多 >"
+                android:textColor="@color/jingxuan"
+                android:textSize="@dimen/text_size_18sp"
+                android:typeface="sans"
+
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/good_itemview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <yc.pointer.trip.view.SampleCoverVideo
+                        android:id="@+id/item_sample_video"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_horizontal_margin260"
+                        android:layout_gravity="center"
+                        android:gravity="center" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/img_gradient_s">
+
+                        <TextView
+                            android:id="@+id/home_video_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin5"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="名副其实的“潜水党”"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="@dimen/text_size_18sp"
+                            android:textStyle="normal"
+                            android:typeface="sans" />
+
+                        <TextView
+                            android:id="@+id/home_play_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/home_video_title"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                            android:drawableLeft="@mipmap/home_play"
+                            android:drawablePadding="@dimen/activity_horizontal_margin5"
+                            android:gravity="center_horizontal"
+                            android:text=""
+                            android:textColor="@color/colorTitle"
+                            android:textSize="@dimen/text_size_14sp" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@mipmap/home_shadow"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/activity_horizontal_margin5"
+                        android:paddingLeft="@dimen/activity_horizontal_margin10"
+                        android:paddingRight="@dimen/activity_horizontal_margin10"
+                        android:paddingTop="@dimen/activity_horizontal_margin20"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/video_length"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="00:00"
+                            android:textColor="@color/colorTitle"
+                            android:textSize="@dimen/text_size_14sp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+                <!--<TextView-->
+                <!--android:id="@+id/home_video_introduce_text"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginBottom="@dimen/activity_horizontal_margin20"-->
+                <!--android:layout_marginLeft="@dimen/activity_horizontal_margin12"-->
+                <!--android:ellipsize="end"-->
+                <!--android:maxLines="2"-->
+                <!--android:text="攀岩蹦极等极限运动都不如自由潜水具有挑战性和危险性，事实上这项运动有古老的历史，很早的时候"-->
+                <!--android:textColor="@color/video_text"-->
+                <!--android:textSize="@dimen/text_size_16sp"-->
+                <!--android:typeface="sans"-->
+                <!---->
+                <!--/>-->
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/home_video_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/good_itemview"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/activity_horizontal_margin15"
+                android:paddingLeft="@dimen/activity_horizontal_margin10"
+                android:paddingTop="@dimen/activity_horizontal_margin15">
+
+                <!--<yc.pointer.trip.view.CustomCircleImage-->
+                <!--android:id="@+id/home_video_fragment_headimg"-->
+                <!--android:layout_width="@dimen/activity_horizontal_margin60"-->
+                <!--android:layout_height="@dimen/activity_horizontal_margin60"-->
+                <!--android:elevation="5dp"-->
+                <!--android:src="@mipmap/head" />  -->
+
+
+                <TextView
+                    android:id="@+id/home_video_fragment_nick"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:maxLines="1"
+                    android:text="asdasdasdasdas"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:typeface="sans" />
+
+                <ImageView
+                    android:id="@+id/video_attention"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/icon_add_g" />
+
+                <TextView
+                    android:id="@+id/video_collection_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                    android:drawableLeft="@mipmap/icon_comments_s"
+                    android:drawablePadding="@dimen/activity_horizontal_margin6"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="1258"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/text_size_14sp"
+                    android:typeface="sans" />
+
+                <ImageView
+                    android:id="@+id/home_hamburger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin20"
+                    android:src="@mipmap/icon_more_s" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relate_head"
+                android:layout_width="@dimen/activity_horizontal_margin45"
+                android:layout_height="@dimen/activity_horizontal_margin45"
+                android:layout_above="@id/home_video_page"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="-15dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin15">
+
+                <yc.pointer.trip.view.CustomCircleImage
+                    android:id="@+id/home_video_fragment_headimg"
+                    android:layout_width="@dimen/activity_horizontal_margin45"
+                    android:layout_height="@dimen/activity_horizontal_margin45"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/head" />
+
+                <ImageView
+                    android:id="@+id/verify_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin30"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin35"
+                    android:src="@mipmap/icon_vip" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

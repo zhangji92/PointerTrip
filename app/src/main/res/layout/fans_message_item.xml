@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+    android:layout_marginRight="@dimen/activity_horizontal_margin10"
+    android:layout_marginTop="@dimen/activity_horizontal_margin20"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_horizontal_margin10">
+
+    <LinearLayout
+        android:id="@+id/liner_fans_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="@dimen/activity_horizontal_margin55"
+            android:layout_height="@dimen/activity_horizontal_margin55"
+            android:layout_gravity="center_horizontal">
+
+            <yc.pointer.trip.view.CustomCircleImage
+                android:id="@+id/fans_head"
+                android:layout_width="@dimen/activity_horizontal_margin50"
+                android:layout_height="@dimen/activity_horizontal_margin50"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/head" />
+
+            <ImageView
+                android:id="@+id/verify_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin38"
+                android:layout_marginTop="@dimen/activity_horizontal_margin36"
+                android:src="@mipmap/icon_vip" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/fans_nickname"
+                    android:layout_width="@dimen/activity_horizontal_margin70"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/fans_message_nick"
+                    android:textSize="@dimen/activity_text_size16"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                    android:text="关注了你"
+                    android:textColor="@color/system_message_date"
+                    android:textSize="@dimen/activity_text_size14"
+                    android:textStyle="normal"
+                    android:typeface="sans" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/fans_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:text="06-12"
+                android:textColor="@color/system_message_date"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="normal"
+                android:typeface="sans" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/atten_button"
+            android:layout_width="@dimen/activity_horizontal_margin90"
+            android:layout_height="@dimen/activity_horizontal_margin40"
+            android:background="@drawable/go_verify"
+            android:text="关注"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin15"
+        android:background="@color/line" />
+
+</LinearLayout>

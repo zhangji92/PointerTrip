@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reservr_relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorTitle"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin2"
+    android:layout_marginRight="@dimen/activity_horizontal_margin2"
+
+  >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTitle"
+        android:elevation="@dimen/activity_horizontal_margin25"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin2"
+        android:layout_marginRight="@dimen/activity_horizontal_margin2"
+        android:layout_marginTop="@dimen/activity_horizontal_margin2"
+      android:layout_marginBottom="@dimen/activity_horizontal_margin5"
+        app:cardBackgroundColor="@color/shadow">
+
+        <ImageView
+            android:id="@+id/order_status_note"
+            android:layout_width="@dimen/activity_horizontal_margin40"
+            android:layout_height="@dimen/activity_horizontal_margin40"
+            android:src="@mipmap/un_completed" />
+
+        <ImageView
+            android:id="@+id/order_refund"
+            android:layout_width="@dimen/activity_horizontal_margin60"
+            android:layout_height="@dimen/activity_horizontal_margin60"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/activity_horizontal_margin30"
+            android:layout_marginTop="@dimen/activity_horizontal_margin55"
+            android:scaleType="fitXY"
+            android:src="@mipmap/order_refundable" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/activity_horizontal_margin10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin30"
+
+                >
+
+                <TextView
+                    android:id="@+id/star_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="天津"
+                    android:textColor="@color/foot_header_item_text"
+                    android:textSize="@dimen/activity_text_size18" />
+
+                <ImageView
+                    android:layout_width="@dimen/activity_horizontal_margin20"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                    android:gravity="center_vertical"
+                    android:src="@mipmap/point" />
+
+                <TextView
+                    android:id="@+id/destination_city"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="上海"
+                    android:textColor="@color/foot_header_item_text"
+                    android:textSize="@dimen/activity_text_size18"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="￥"
+                    android:textColor="@color/horizontal_text"
+                    android:textSize="@dimen/activity_text_size16" />
+
+                <TextView
+                    android:id="@+id/order_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:text="100"
+                    android:textColor="@color/horizontal_text"
+                    android:textSize="@dimen/activity_text_size25" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin8"
+                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                android:background="@color/road_line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+                android:layout_marginTop="@dimen/activity_horizontal_margin8"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/activity_horizontal_margin10">
+
+                <RelativeLayout
+                    android:id="@+id/unpaid_relative"
+                    android:layout_width="@dimen/activity_horizontal_margin70"
+                    android:layout_height="@dimen/activity_horizontal_margin80"
+                    android:background="@mipmap/unpaid_header">
+
+                    <yc.pointer.trip.view.CustomCircleImage
+                        android:id="@+id/order_head"
+                        android:layout_width="@dimen/activity_horizontal_margin70"
+                        android:layout_height="@dimen/activity_horizontal_margin70"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin15"
+                        android:src="@mipmap/head" />
+
+                    <ImageView
+                        android:id="@+id/order_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin10"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin10"
+                        android:src="@mipmap/make_man" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/activity_text_size20"
+                            android:layout_height="@dimen/activity_text_size20"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+                            android:src="@mipmap/people" />
+
+                        <TextView
+                            android:id="@+id/reserve_people"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                            android:drawablePadding="@dimen/activity_horizontal_margin8"
+                            android:text="小七"
+                            android:textColor="@color/foot_header_item_text"
+                            android:textSize="@dimen/activity_text_size18" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/activity_text_size20"
+                            android:layout_height="@dimen/activity_text_size20"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin15"
+                            android:src="@mipmap/preview_day" />
+
+                        <TextView
+                            android:id="@+id/order_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin10"
+                            android:drawablePadding="@dimen/activity_horizontal_margin8"
+                            android:text="2014.07.19"
+                            android:textColor="@color/foot_header_item_text"
+                            android:textSize="@dimen/activity_text_size18" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/order_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:text="No.123456789"
+
+
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
